@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	
+	//IS THIS SHIT WORKING YET?!
+	
 	$(".dropdown").mouseenter(function() {
 		$(this).css("background-color", "white");
 	});
