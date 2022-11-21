@@ -16,7 +16,7 @@
   }
   #Contact {
     margin:0;
-  }  
+  }
 }
 
 @media screen and (max-width:1000px) {
@@ -43,7 +43,7 @@ body {
   z-index:99;
   border-radius:50%;
   background-color:rgba(255, 255, 255, 0.8);
-  color:#5a7084; 
+  color:#5a7084;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -95,6 +95,12 @@ body {
   width: 55%;
 }
 
+#hamburger {
+	/* border: 1px solid white;
+	display: flex;
+	justify-content: center;*/
+}
+
 .navbar-nav {
   float:right;
 }
@@ -111,12 +117,12 @@ a {
 
 #eighthnote {
   max-height: 55px;
-  margin-top:-25%;     
+  margin-top:-25%;
 }
 
 #menu {
-  border:0.5px solid white; 
-  margin-top:12.5px; 
+  border:0.5px solid white;
+  margin-top:12.5px;
   margin-right:0;
 }
 
@@ -125,10 +131,10 @@ span {
 }
 
 .block1 {
-  margin:0 25%; 
+  margin:0 25%;
   background-color: #4c789e;
   box-shadow:0px 0px 20px  black;
-  
+
 }
 
 #fatbottomgirls {
@@ -136,13 +142,13 @@ span {
 }
 
 #myFace {
-  border-radius:50%; 
-  margin:15% auto; 
+  border-radius:50%;
+  margin:15% auto;
 }
 
 #about {
   font-size: 1.8em;
-  margin-top: 28%;  
+  margin-top: 28%;
 }
 
 /*section 2*/
@@ -152,7 +158,7 @@ span {
   margin:0 25%;
   background-color:white;
   color:#4c789e;
-  box-shadow:0px 10px 15px black;  
+  box-shadow:0px 10px 15px black;
 }
 
 .port {
@@ -162,14 +168,14 @@ span {
 }
 
 .webshots {
-  border:3px solid rgba(90, 112, 132, 0.45);  
+  border:3px solid rgba(90, 112, 132, 0.45);
   border-radius:15px;
-  
+
 }
 
-.screenshots {  
-  border-radius:5px; 
-  
+.screenshots {
+  border-radius:5px;
+
 }
 
 .col-sm-12 {
@@ -179,7 +185,7 @@ span {
 /*section 3*/
 
 .block3 {
-  height:100%;  
+  height:100%;
   background-color:#76a1c7;
   margin:0 25%;
   box-shadow:0px 10px 15px black;
@@ -199,7 +205,7 @@ span {
   margin:5px auto;
   background-color:#76a1c7;
   font-size:26px;
-  
+
 }
 
 #inputs {
@@ -209,15 +215,15 @@ span {
 
 ::placeholder {
   font-size:30px;
-  color:white;    
+  color:white;
   border-style:none none groove none;
-  
+
 }
 
 #send {
   color:#337ab7;
-  margin:5% 40%; 
-  min-width:55px; 
+  margin:5% 40%;
+  min-width:55px;
   min-height:28px;
   border:1px solid rgba(255 255 255 0.7);
   border-radius:5px;
@@ -231,22 +237,22 @@ span {
   background-color:#76a1c7;
   font-size:26px;
   height:180px;
-  
+
 }
 
 /*Section 4*/
 
 .block4 {
-  height:100%;  
+  height:100%;
   background-color:#3374ad;
   box-shadow:0px 0px 5px black;
   font-family:"Josefin Sans", sans-serif;
-  
+
 }
 
 .block4-text {
   margin:3% 25%;
- 
+
 }
 
 
@@ -254,7 +260,7 @@ span {
   background-color: black;
   border-color: black;
   color: #337ab7;
-  font-size: 1.5em;  
+  font-size: 1.5em;
   margin-top:.9em;
 }
 
@@ -264,13 +270,13 @@ span {
   width:100%;
   height:8.5em;
   background-color:black;
-  width:100%;  
+  width:100%;
   box-shadow:0px 10px 15px black;
-  
+
 }
 
 #myName {
-  color:white;  
+  color:white;
   font-size:1.2em;
   font-family:serif;
   border:transparent;
