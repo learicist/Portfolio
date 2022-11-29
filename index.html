@@ -52,9 +52,9 @@
 					</div>
 					<div id="hamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="dropdown"><a href="#Contact"><span>Contact</span></a></li>
-							<li class="dropdown"><a href="#Portfolio"><span>Portfolio</span></a></li>
 							<li class="dropdown"><a href="#About"><span>About</span></a></li>
+							<li class="dropdown"><a href="#Portfolio"><span>Portfolio</span></a></li>
+							<li class="dropdown"><a href="#Contact"><span>Contact</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -63,14 +63,14 @@
 
 			<div id="About" class="container-fluid block1">
 				<div class="row">
-					<div class="col-md-8 aboutMe">
+					<div class="col-sm-8 aboutMe">
 						<p id="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates that were then hired to teach at coding bootcamps in Universities across the world.
 						</p>
-						<h3>//\\//\\</h3>
+						<h2 style="color: black;">//\\//\\</h2>
 						<h3 id="fatbottomgirls">Website Construction - Content Creation - Music</h3>
 					</div>
 					<div>
-						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+						<img class="col-sm-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
 					</div>
 				</div>
 			</div><!--end of about me section-->
@@ -79,37 +79,88 @@
 		<!--end of Page1-->
 
 		<div id="Portfolio" class="container-fluid block2">
-			<div class="row">
-				<h2 class="col-sm-12 port">Portfolio</h2>
-				<br></br>
-				<h3 style="margin-bottom:5%" class="col-sm-12 port">//\\//\\</h3>
-			</div>
-			<div class="webshots">
-				<div class="row screenshots">
-					<!--GIVE EACH SCREENSHOT ITS OWN DIV-->
-					<!-- <h4 class="titles">Wikipedia Navigator</h4> -->
-					<!-- <p>Generates a random article to read about, or allows you to search the site directly from here</p> -->
+			<div id="portRow" class="row">
+				<div id="portBox" class="col-sm-4">
+					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
+					<h3 class="port" style="margin-bottom: 2%; color: black;">//\\//\\</h3>
+					<h4 class="port">Click each one to explore further</h4>
+				</div>
+			</div><!--portRow-->
+			<div class="row webshots">
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Wikipedia Navigator</h4>
+					<br>
+					<p class="titles descriptors">Generates a random article to read about, or allows you to search the site directly from here</p>
 					<a target="_blank" href="https://learicist.github.io/WikiPedia-Navigator/">
-						<img style="margin:auto" class="col-lg-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1505965863/Portfolio/wiki_kossek.jpg" alt="screenshot of webpage"/>
-					</a>
-					<a target="_blank" href="https://learicist.github.io/Quote-Machine/">
-						<img style="margin:auto" class="col-lg-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1505965867/Portfolio/quote_jlckq7.jpg" alt="screenshot of webpage"/>
-					</a>
-				</div>
-				<div class="row screenshots">
-					<a target="_blank" href="https://learicist.github.io/Tic-Tac-Toe/">
-						<img style="margin:auto" class="col-lg-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1660723776/Portfolio/Tic_Tac_Toe.png" alt="screenshot of webpage"/>
-					</a>
-					<a target="_blank" href="https://learicist.github.io/Simon/">
-						<img style="margin:auto" class="col-lg-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1532290363/Portfolio/Simon_zlcuby.png" alt="screenshot of webpage"/>
+						<img 
+							style="margin:auto" 
+							class="img-responsive" 
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1669700597/Portfolio/wiki.png"/>
 					</a>
 				</div>
-				<div class="row screenshots">
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Commission Build for Client</h4>
+					<br>
+					<p class="titles descriptors">Bespoke handwritten letter service with tempaltes and custom service form</p>
 					<a target="_blank" href="https://learicist.github.io/Bless-you-it-s-true/">
-						<img style="margin:auto" class="col-md-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1660724873/Portfolio/quill.png" alt="screenshot of webpage"/>
+						<img 
+							style="margin: auto" 
+							class="img-responsive" 
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1669685472/Portfolio/quill.png"/>
 					</a>
+				</div>
+			</div><!--webshots-->
+			<div class="row webshots">
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Tic Tac Toe vs The Computer</h4>
+					<br>
+					<p class="titles descriptors">Fully Functional game that allows you to play against my code. See if you can win!</p>
+					<a target="_blank" href="https://learicist.github.io/Tic-Tac-Toe/">
+						<img 
+							style="margin:auto" 
+							class="img-responsive"
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1660723776/Portfolio/Tic_Tac_Toe.png"/>
+					</a>
+				</div>
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Simon Says</h4>
+					<br>
+					<p class="titles descriptors">Capstone Project for my Front End Development Certification that mimics the toy we had as kids.</p>
+					<a target="_blank" href="https://learicist.github.io/Simon/">
+						<img 
+							style="margin:auto" 
+							class="img-responsive" 
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1532290363/Portfolio/Simon_zlcuby.png"/>
+					</a>
+				</div>
+			</div><!--webshots-->
+			<div class="row webshots">
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Random Quote Generator</h4>
+					<br>
+					<p class="titles descriptors">API call to generate a random quote and its author. Also allows user to Tweet it out.</p>
+					<a target="_blank" href="https://learicist.github.io/Quote-Machine/">
+						<img 
+							style="margin:auto" 
+							class="img-responsive"  
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1669700503/Portfolio/quote.png"/>
+					</a>
+				</div>
+				<div class="col-sm-6 screenshots">
+					<h4 class="titles">Calculator</h4>
+					<br>
+					<p class="titles descriptors">Function over Form for this project. A fully working calculator that allows both backspacing and clearing out.</p>
 					<a target="_blank" href="https://learicist.github.io/Calculator/">
-						<img style="margin:auto" class="col-md-6 img-responsive" src="https://res.cloudinary.com/learicist/image/upload/v1505965865/Portfolio/calc_ojr9pn.jpg" alt="screenshot of webpage"/>
+						<img 
+							style="margin:auto" 
+							class="img-responsive" 
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1669700290/Portfolio/calc.png"/>
 					</a>
 				</div>
 			</div><!--webshots-->
@@ -166,7 +217,7 @@
 						<div>
 							<a class="btn btn-default me" target="_blank" href="https://github.com/learicist">GitHub</a>
 							<a class="btn btn-default me" target="_blank" href="https://www.linkedin.com/in/learicist/">LinkedIn</a>
-							<a class="btn btn-default me" target="_blank" href="https://codepen.io/learicist/">CodePen</a>
+							<a class="btn btn-default me" target="_blank" href="https://www.instagram.com/thelearicist/">Instagram</a>
 							<a class="btn btn-default me" target="_blank" href="https://soundcloud.com/learicist">SoundCloud</a>
 						</div>
 					</div>
@@ -184,7 +235,7 @@
 	<footer>
 		<div class="container-fluid foot">
 			<div>
-				<h5 id="copyright">learicist &copy;2017. All Rights Reserved</h5>
+				<h5 id="copyright">learicist &copy;2022. All Rights Reserved</h5>
 			</div>
 		</div>
 	</footer>
