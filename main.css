@@ -156,12 +156,12 @@ span {
 }
 
 #fatbottomgirls {
-  margin-bottom:10%;
+  margin-bottom: 5%;
 }
 
 #myFace {
   border-radius:50%;
-  margin:15% auto;
+  margin: 12% auto 5% auto;
 }
 
 #about {
@@ -228,6 +228,7 @@ span {
 img[alt="screenshot of webpage"] {
   border: 2px solid white;
   border-radius: 15px;
+  min-height: 100%;
 }
 
 /* .col-sm-12 {
