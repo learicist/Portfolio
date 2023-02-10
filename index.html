@@ -33,8 +33,23 @@
 	</head>
 
 	<body>
-		<!-- PUT ALL INSIDE ONE CONTAINER -->
-		<div class="pageOne text-center">
+		<div class="container-fluid" id="openingQuestion">
+			<div class="row openingPageRow">
+				<div class="col-md-8">
+					<h1 style="font-size: 3em" id="question">Who are you here to see?</h1>
+				</div>
+			</div>
+			<div class="row openingPageRow">
+				<div class="col-md-8">
+					<button class="openingChoice" id="chooseCoding">Michael Leary, &lt;Web Developer/&gt;</button>
+					<button class="openingChoice" id="chooseMusic">Learicist, &#9836;Musician&#9836;</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- NAVBAR -->
+		<div class="pageOne text-center codePage hidden">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div id="nav" class="container">
 					<div class="navbar-header">
@@ -44,6 +59,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
+						<!-- CHANGE HREF TO LOAD MUSIC PAGE VIA JS -->
 						<a class="navbar-brand" href="#top">
 							<img
 								id="eighthnote"
@@ -53,22 +69,22 @@
 					</div>
 					<div id="hamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="dropdown"><a href="#About"><span>About</span></a></li>
-							<li class="dropdown"><a href="#Portfolio"><span>Portfolio</span></a></li>
-							<li class="dropdown"><a href="#Contact"><span>Contact</span></a></li>
+							<li class="dropdown"><a href="#codeAbout"><span>About</span></a></li>
+							<li class="dropdown"><a href="#codePortfolio"><span>Portfolio</span></a></li>
+							<li class="dropdown"><a href="#codeContact"><span>Contact</span></a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 
 
-			<div id="About" class="container-fluid block1">
+			<div id="codeAbout" class="container-fluid block1">
 				<div class="row">
 					<div class="col-md-8 aboutMe">
-						<p id="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates that were then hired to teach at coding bootcamps in Universities across the world.
+						<p id="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
 						</p>
 						<h2 style="color: black;">//\\//\\</h2>
-						<h3 id="fatbottomgirls">Website Construction - Content Creation - Music</h3>
+						<h3 id="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
 					</div>
 					<div>
 						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
@@ -79,7 +95,7 @@
 
 		<!--end of Page1-->
 
-		<div id="Portfolio" class="container-fluid block2">
+		<div id="codePortfolio" class="container-fluid block2 pageTwo codePage hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
@@ -201,7 +217,7 @@
 			</div>
 		</div>-->
 
-		<div id="Contact" class="container-fluid block4">
+		<div id="codeContact" class="container-fluid block4 pageThree codePage hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
@@ -218,13 +234,99 @@
 						<div>
 							<a class="btn btn-default me" target="_blank" href="https://github.com/learicist">GitHub</a>
 							<a class="btn btn-default me" target="_blank" href="https://www.linkedin.com/in/learicist/">LinkedIn</a>
-							<a class="btn btn-default me" target="_blank" href="https://www.instagram.com/thelearicist/">Instagram</a>
-							<a class="btn btn-default me" target="_blank" href="https://soundcloud.com/learicist">SoundCloud</a>
+							<a class="btn btn-default me" target="_blank" href="https://www.instagram.com/learicist/">Instagram</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- ============================================================================================================ 
+		                                                  MUSIC PAGE BELOW
+		================================================================================================================= -->
+
+		<!-- NAVBAR -->
+		<div class="pageOne text-center musicPage hidden">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div id="nav" class="container">
+					<div class="navbar-header">
+						<button id="menu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#hamburger" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- CHANGE HREF TO LOAD CODE PAGE VIA JS -->
+						<a class="navbar-brand" style="background-color: white; color: black; margin-top: 10%;" href="#top">&lt; /&gt;
+							<!-- FIND IMAGE OF HTML TAGS -->
+							<!-- <img
+								id="elementTags"
+								src="http://atlas-content-cdn.pixelsquid.com/stock-images/eighth-note-musical-5AvDPr9-600.jpg" alt="music note"
+							/> -->
+						</a>
+					</div>
+					<div id="hamburger" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown"><a href="#musicAbout"><span>About</span></a></li>
+							<li class="dropdown"><a href="#musicPortfolio"><span>Portfolio</span></a></li>
+							<li class="dropdown"><a href="#musicContact"><span>Contact</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+			<div id="musicAbout" class="container-fluid block1">
+				<div class="row">
+					<div class="col-md-8 aboutMe">
+						<p id="about">Musician and Vocalist with 19 years experience playing, writing, performing and recording. 
+							<br>
+							<strong>Instruments:</strong> Acoustic/Electric/Slide/Lap Steel Guitar, Bass, Drums, Piano, Percussion. 
+							<br>
+							<strong>Stage:</strong> Over 250 shows in band and solo settings; NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; Binghamton, NY --> Spring Fling main stage on the SUNY Campus, Event Center on the SUNY Campus, Thirsty's, On The Roxx, PeaceMaker's Stage. 
+							<br>
+							<strong>Recording:</strong> Composition, Recording, Editing, Mixing, FX, Mastering, Rendering; Two full LP records of original music with The Mad Hatters 2009 - 2011, Over 50 self-produced recordings for solo work, Commissioned Bespoke original compositions for special occassions.
+						</p>
+						<h2 style="color: black;">//\\//\\</h2>
+						<h3 id="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
+					</div>
+					<div>
+						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+					</div>
+				</div>
+			</div><!--end of about me section-->
+		</div>
+
+		<!--end of Page1-->
+
+		<div id="musicContact" class="container-fluid block4 pageThree musicPage hidden">
+			<div class="container-fluid block4-text">
+				<div class="row">
+					<div class="col-md-6" id="blBlock">
+						<h4 style="margin-top:1.2em" class="text-center bottomLeft">ABOUT THIS PAGE</h4>
+						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to AESOP ROCK & ATCQ
+							<br></br>
+							by
+							<a id="myName" class="btn btn-default" target="_blank" href="https://twitter.com/learicist">Michael Leary</a>
+						</p>
+					</div>
+
+					<div class="col-md-6 text-center" id="brBlock">
+						<h4># FIND ME #</h4>
+						<div>
+							<a class="btn btn-default me" target="_blank" href="https://www.instagram.com/thelearicist/">Instagram</a>
+							<a class="btn btn-default me" target="_blank" href="https://soundcloud.com/learicist">SoundCloud</a>
+							<a class="btn btn-default me" target="_blank" href="https://www.linkedin.com/in/learicist/">LinkedIn</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
 
 		<a href="javascript:" id="scrollUp">
 			<i class="fas fa-angle-up"></i>
@@ -236,7 +338,8 @@
 	<footer>
 		<div class="container-fluid foot">
 			<div>
-				<h5 id="copyright">learicist &copy;2022. All Rights Reserved</h5>
+				<h5 id="copyright">Learicist &copy;2018-2023</h5>
+				<!-- All Rights Reserved -->
 			</div>
 		</div>
 	</footer>

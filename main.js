@@ -2,23 +2,66 @@ $(document).ready(function() {
 	
 	//IS THIS SHIT WORKING YET?!
 	
-	$(".dropdown").mouseenter(function() {
-		$(this).css("background-color", "white");
+	$(".openingChoice").on({
+		mouseenter: function () {
+			$(this).css("background-color", "black"); 
+			$(this).css("color", "white");
+			if (this.id == "chooseCoding") {
+				$(this).click(function () {
+					//console.log("test");
+					// FADEOUT/SETTIMEOUT HERE
+					$("#openingQuestion").addClass("hidden");
+					$(".codePage").removeClass("hidden");
+				});
+			} else if (this.id == "chooseMusic") {
+				$(this).click(function () {
+					//console.log("test");
+					// FADEOUT/SETTIMEOUT HERE
+					$("#openingQuestion").addClass("hidden");
+					$(".musicPage").removeClass("hidden");
+				});
+			}
+		},
+		mouseleave: function () {
+			$(this).css("background-color", "white");
+			$(this).css("color", "black");
+		}
 	});
 
-	$(".dropdown").mouseleave(function() {
-		$(this).css("background-color", "black");
+	$(".navbar-brand").on({
+		// MOUSEENTER STUFF??
+		// ADD FADEOUT/SETTIMEOUT FEATURES
+		click: function () {
+			if ($('.musicPage').hasClass("hidden")) {
+				$(".codePage").addClass("hidden");
+				$(".musicPage").removeClass("hidden");
+			} else if ($('.codePage').hasClass("hidden")) {
+				$(".musicPage").addClass("hidden");
+				$(".codePage").removeClass("hidden");
+			}
+		}
 	});
 
-	$("#myName").mouseenter(function() {
-		$(this).css("background-color", "white");
-		$(this).css("color", "black");
+	$(".dropdown").on({
+		mouseenter: function() {
+			$(this).css("background-color", "white");
+		},
+		mouseleave: function() {
+			$(this).css("background-color", "black");
+		}
 	});
 
-	$("#myName").mouseleave(function() {
-		$(this).css("background-color", "#3374ad");
-		$(this).css("color", "white");
+	$("#myName").on({
+		mouseenter: function() {
+			$(this).css("background-color", "white");
+			$(this).css("color", "black");
+		},
+		mouseleave: function() {
+			$(this).css("background-color", "#3374ad");
+			$(this).css("color", "white");
+		}
 	});
+
 
 	$(window).scroll(function() {
 		// If page is scrolled more than 50px
