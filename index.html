@@ -36,7 +36,7 @@
 		<div class="container-fluid" id="openingQuestion">
 			<div class="row openingPageRow">
 				<div class="col-md-8">
-					<h1 style="font-size: 3em" id="question">Who are you here to see?</h1>
+					<h1 style="font-size: 4vw" id="question">Who are you here to see?</h1>
 				</div>
 			</div>
 			<div class="row openingPageRow">
@@ -53,7 +53,7 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div id="nav" class="container">
 					<div class="navbar-header">
-						<button id="menu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#hamburger" aria-expanded="false" aria-controls="navbar">
+						<button id="codeMenu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#codeHamburger" aria-expanded="false" aria-controls="navbar">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -67,7 +67,7 @@
 							/>
 						</a>
 					</div>
-					<div id="hamburger" class="navbar-collapse collapse">
+					<div id="codeHamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="dropdown"><a href="#codeAbout"><span>About</span></a></li>
 							<li class="dropdown"><a href="#codePortfolio"><span>Portfolio</span></a></li>
@@ -77,14 +77,13 @@
 				</div>
 			</nav>
 
-
 			<div id="codeAbout" class="container-fluid block1">
 				<div class="row">
 					<div class="col-md-8 aboutMe">
-						<p id="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
+						<p class="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
 						</p>
-						<h2 style="color: black;">//\\//\\</h2>
-						<h3 id="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
+						<h2 style="color: black;"><strong>//\\//\\</strong></h2>
+						<h3 class="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
 					</div>
 					<div>
 						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
@@ -92,14 +91,13 @@
 				</div>
 			</div><!--end of about me section-->
 		</div>
-
 		<!--end of Page1-->
 
 		<div id="codePortfolio" class="container-fluid block2 pageTwo codePage hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
-					<h3 class="port" style="margin-bottom: 2%; color: black;">//\\//\\</h3>
+					<h3 class="port" style="margin-bottom: 2%; color: black;"><strong>//\\//\\</strong></h3>
 					<h4 class="port">Click each one to explore further</h4>
 				</div>
 			</div><!--portRow-->
@@ -182,42 +180,41 @@
 				</div>
 			</div><!--webshots-->
 		</div>
-
 		<!--end of page 2-->
 
-		<!--REBUILD ENCRYPTED-->
-		<!--Footer is borrowing Contact ID for nav link purposes, return when rebuilt-->
-		<!--=============================================================================-->
-		<!--<div id="Contact" class="container-fluid block3">
-		  <div class="row">
-			<h2 class="col-md-12 title">Contact Me</h2>
-		  </div>
-		  <div class="row">
-			<h3 class="col-md-12">//\\//\\</h3>
-		  </div>
-			  <div style="margin-bottom:10px" class="row">
-				<ul id="inputs" class="col-md-6">
-				  <form action="mailto:learicist@gmail.com" method="post" enctype="text/plain">
-					<li>
-					  <input class="textbox" type="text" placeholder="Name" required/>
-					</li>
-					<li>
-					  <input class="textbox" type="text" placeholder="Email Address" required/>
-					</li>
-					<li>
-					  <input class="textbox" type="text" placeholder="Phone Number" required/>
-					</li>
-					<li>
-					  <textarea class="textbox" id="messagebox" type="text" placeholder="Message" required></textarea>
-					</li>
-					<button id="send" type="submit">Send</button>
-				  </form>
-				</ul>
-				<h4 style="margin-top:4%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding Programming, my projects and experience, or even Music. I would be happy to hear from you and address any questions or curiosities you may have. L<span style="color:orange">e</span>t'<span style="color:orange">s</span> g<span style="color:orange">o</span> M<span style="color:orange">e</span>t<span style="color:orange">s</span>!</h4>
+		<div id="codeContact" class="container-fluid block3 hidden codePage contacts">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="title">Contact Me</h2>
+					<h3 class=""><strong>//\\//\\</strong></h3>
+				</div>
 			</div>
-		</div>-->
+			<div style="margin-bottom:10px" class="row">
+				<ul id="codeInputs" class="col-md-6 inputs">
+					<form action="https://formspree.io/f/moqzenqo" method="POST" enctype="text/plain">
+						<li>
+							<input class="textbox" type="text" placeholder="Name" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" placeholder="Email Address" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" placeholder="Phone Number" required/>
+						</li>
+						<li>
+							<textarea class="textbox" id="messagebox" type="text" placeholder="Message" required></textarea>
+						</li>
+						<button id="send" type="submit">Send</button>
+					</form>
+				</ul>
+				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding programming, my projects and experience, or just to talk some Philosophy with me. 
+					<br><br>
+					I would be happy to hear from you and address any questions or curiosities you may have. L<span style="color:orange">e</span>t'<span style="color:orange">s</span> g<span style="color:orange">o</span> M<span style="color:orange">e</span>t<span style="color:orange">s</span>!
+				</h4>
+			</div>
+		</div>
 
-		<div id="codeContact" class="container-fluid block4 pageThree codePage hidden">
+		<div id="codeFindMe" class="container-fluid block4 pageThree codePage hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
@@ -250,14 +247,14 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div id="nav" class="container">
 					<div class="navbar-header">
-						<button id="menu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#hamburger" aria-expanded="false" aria-controls="navbar">
+						<button id="musicMenu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#musicHamburger" aria-expanded="false" aria-controls="navbar">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
 						<!-- CHANGE HREF TO LOAD CODE PAGE VIA JS -->
-						<a class="navbar-brand" style="background-color: white; color: black; margin-top: 10%;" href="#top">&lt; /&gt;
+						<a class="navbar-brand" id="htmlTags" href="#top">&lt; /&gt;
 							<!-- FIND IMAGE OF HTML TAGS -->
 							<!-- <img
 								id="elementTags"
@@ -265,7 +262,7 @@
 							/> -->
 						</a>
 					</div>
-					<div id="hamburger" class="navbar-collapse collapse">
+					<div id="musicHamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="dropdown"><a href="#musicAbout"><span>About</span></a></li>
 							<li class="dropdown"><a href="#musicPortfolio"><span>Portfolio</span></a></li>
@@ -275,20 +272,27 @@
 				</div>
 			</nav>
 
-
 			<div id="musicAbout" class="container-fluid block1">
 				<div class="row">
-					<div class="col-md-8 aboutMe">
-						<p id="about">Musician and Vocalist with 19 years experience playing, writing, performing and recording. 
+					<div class="col-md-8 musicAboutMe">
+						<p class="about" style="margin-top: 20%;">Musician and Vocalist with 19 years experience playing, writing, performing and recording. 
 							<br>
 							<strong>Instruments:</strong> Acoustic/Electric/Slide/Lap Steel Guitar, Bass, Drums, Piano, Percussion. 
 							<br>
-							<strong>Stage:</strong> Over 250 shows in band and solo settings; NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; Binghamton, NY --> Spring Fling main stage on the SUNY Campus, Event Center on the SUNY Campus, Thirsty's, On The Roxx, PeaceMaker's Stage. 
+							<strong>Stage:</strong> 250+ shows in band and solo settings; 
 							<br>
-							<strong>Recording:</strong> Composition, Recording, Editing, Mixing, FX, Mastering, Rendering; Two full LP records of original music with The Mad Hatters 2009 - 2011, Over 50 self-produced recordings for solo work, Commissioned Bespoke original compositions for special occassions.
+							NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
+							<br>
+							Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On The Roxx, PeaceMaker's Stage. 
+							<br>
+							<strong>Recording:</strong> Composition, Recording, Editing, Mixing, FX, Mastering, Rendering; 
+								<br>
+								The Mad Hatters (2009 - 2011) --> Two full LP records of self-produced original music 
+								<br>
+								Learicist --> 50+ self-produced recordings, Commissioned Bespoke original compositions
 						</p>
-						<h2 style="color: black;">//\\//\\</h2>
-						<h3 id="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
+						<h2 style="color: black;"><strong>//\\//\\</strong></h2>
+						<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
 					</div>
 					<div>
 						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
@@ -296,15 +300,154 @@
 				</div>
 			</div><!--end of about me section-->
 		</div>
-
 		<!--end of Page1-->
 
-		<div id="musicContact" class="container-fluid block4 pageThree musicPage hidden">
+		<div id="musicPortfolio" class="container-fluid block2 pageTwo musicPage hidden">
+			<div id="portRow" class="row">
+				<div id="portBox" class="col-md-6">
+					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
+					<h3 class="port" style="margin-bottom: 2%; color: black;"><strong>//\\//\\</strong></h3>
+					<h4 class="port">Click each one to explore further</h4>
+				</div>
+			</div><!--portRow-->
+			<div class="row webshots">
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Commission Song for Client</h4>
+					<br>
+					<p class="titles descriptors">Custom Birthday song for client's loved one based off info provided. Everything you hear is me.</p>
+					<iframe 
+						width="560" 
+						height="315" 
+						class="youtubes"
+						src="https://www.youtube.com/embed/QJ-v1gt63nI" 
+						title="YouTube video player" 
+						frameborder="1" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Commission Song for Client</h4>
+					<br>
+					<p class="titles descriptors">Custom Birthday song for client's loved one based off info provided. Everything you hear is me.</p>
+					<iframe 
+						width="560" 
+						height="315" 
+						class="youtubes"
+						src="https://www.youtube.com/embed/QJ-v1gt63nI" 
+						title="YouTube video player" 
+						frameborder="1" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div><!--webshots-->
+			<div class="row webshots">
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">"The Letter" by Joe Cocker</h4>
+					<br>
+					<p class="titles descriptors">My take on a tune originally written by The Box Tops in the 60's. 
+						<br>
+						A friend lent her voice for one of the harmonies, all else you hear is me.
+					</p>
+					<iframe 
+						width="560" 
+						height="315" 
+						class="youtubes"
+						src="https://www.youtube.com/embed/BtJXA4_u380" 
+						title="YouTube video player" 
+						frameborder="1" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">"What Are You Doing New Year's Eve?" by Frank Loesser</h4>
+					<br>
+					<p class="titles descriptors">My take on a American Standard to celebrate Lunar New Year. Everything you hear is me.</p>
+					<iframe 
+						width="560" 
+						height="315" 
+						class="youtubes"
+						src="https://www.youtube.com/embed/2tlE8UXkEcc" 
+						title="YouTube video player" 
+						frameborder="1" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div><!--webshots-->
+			<!-- <div class="row webshots">
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Simon Says</h4>
+					<br>
+					<p class="titles descriptors">Capstone Project for my Front End Development Certification that mimics the toy we had as kids.</p>
+					<a target="_blank" href="https://learicist.github.io/Simon/">
+						<img 
+							style="margin:auto" 
+							class="img-responsive" 
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1532290363/Portfolio/Simon_zlcuby.png"/>
+					</a>
+				</div>
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Random Quote Generator</h4>
+					<br>
+					<p class="titles descriptors">API call to generate a random quote and its author. Also allows user to Tweet it out.</p>
+					<a target="_blank" href="https://learicist.github.io/Quote-Machine/">
+						<img 
+							style="margin:auto" 
+							class="img-responsive"  
+							alt="screenshot of webpage"
+							src="https://res.cloudinary.com/learicist/image/upload/v1669700503/Portfolio/quote.png"/>
+					</a>
+				</div>
+			</div> -->
+			<!--webshots-->
+		</div>
+		<!--end of page 2-->
+
+		<div id="musicContact" class="container-fluid block3 hidden musicPage contacts">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="title">Contact Me</h2>
+					<h3 class=""><strong>//\\//\\</strong></h3>
+				</div>
+			</div>
+			<div style="margin-bottom:10px" class="row">
+				<ul id="musicInputs" class="col-md-6 inputs">
+					<form action="https://formspree.io/f/moqzenqo" method="POST" enctype="text/plain">
+						<li>
+							<input class="textbox" type="text" placeholder="Name" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" placeholder="Email Address" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" placeholder="Phone Number" required/>
+						</li>
+						<li>
+							<textarea class="textbox" id="messagebox" type="text" placeholder="Message" required></textarea>
+						</li>
+						<button id="send" type="submit">Send</button>
+					</form>
+				</ul>
+				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding commissioned songs, my projects and experience, or just to talk some Philosophy with me. 
+					<br><br>
+					I would be happy to hear from you and address any questions or curiosities you may have. L<span style="color:orange">e</span>t'<span style="color:orange">s</span> g<span style="color:orange">o</span> M<span style="color:orange">e</span>t<span style="color:orange">s</span>!
+				</h4>
+			</div>
+		</div>
+
+
+		<div id="musicFindMe" class="container-fluid block4 pageThree musicPage hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
 						<h4 style="margin-top:1.2em" class="text-center bottomLeft">ABOUT THIS PAGE</h4>
-						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to AESOP ROCK & ATCQ
+						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to The Impossible Kid 
+							<br>
+							& We Got it from Here, Thank You for Your Service
 							<br></br>
 							by
 							<a id="myName" class="btn btn-default" target="_blank" href="https://twitter.com/learicist">Michael Leary</a>
