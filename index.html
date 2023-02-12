@@ -36,13 +36,19 @@
 		<div class="container-fluid" id="openingQuestion">
 			<div class="row openingPageRow">
 				<div class="col-md-8">
-					<h1 style="font-size: 4vw" id="question">Who are you here to see?</h1>
+					<h1 id="question">Who are you here to see?</h1>
 				</div>
 			</div>
 			<div class="row openingPageRow">
 				<div class="col-md-8">
-					<button class="openingChoice" id="chooseCoding">Michael Leary, &lt;Web Developer/&gt;</button>
-					<button class="openingChoice" id="chooseMusic">Learicist, &#9836;Musician&#9836;</button>
+					<button class="openingChoice" id="chooseCoding">Michael Leary, 
+						<br>
+						&lt;Web Developer/&gt;
+					</button>
+					<button class="openingChoice" id="chooseMusic">Learicist, 
+						<br>
+						&#9836;Musician&#9836;
+					</button>
 				</div>
 			</div>
 		</div>
@@ -77,7 +83,7 @@
 				</div>
 			</nav>
 
-			<div id="codeAbout" class="container-fluid block1">
+			<div id="codeAbout" class="container-fluid block1 codeBody">
 				<div class="row">
 					<div class="col-md-8 aboutMe">
 						<p class="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
@@ -93,7 +99,7 @@
 		</div>
 		<!--end of Page1-->
 
-		<div id="codePortfolio" class="container-fluid block2 pageTwo codePage hidden">
+		<div id="codePortfolio" class="container-fluid block2 pageTwo codePage codeBody hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
@@ -182,7 +188,7 @@
 		</div>
 		<!--end of page 2-->
 
-		<div id="codeContact" class="container-fluid block3 hidden codePage contacts">
+		<div id="codeContact" class="container-fluid block3 hidden codePage codeBody contacts">
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="title">Contact Me</h2>
@@ -199,12 +205,12 @@
 							<input class="textbox" type="text" placeholder="Email Address" required/>
 						</li>
 						<li>
-							<input class="textbox" type="text" placeholder="Phone Number" required/>
+							<input class="textbox" type="text" placeholder="Phone Number (optional)"/>
 						</li>
 						<li>
-							<textarea class="textbox" id="messagebox" type="text" placeholder="Message" required></textarea>
+							<textarea class="textbox messagebox" type="text" placeholder="Message" required></textarea>
 						</li>
-						<button id="send" type="submit">Send</button>
+						<button class="send" type="submit">Send</button>
 					</form>
 				</ul>
 				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding programming, my projects and experience, or just to talk some Philosophy with me. 
@@ -214,7 +220,7 @@
 			</div>
 		</div>
 
-		<div id="codeFindMe" class="container-fluid block4 pageThree codePage hidden">
+		<div id="codeFindMe" class="container-fluid block4 pageThree codePage codeBody hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
@@ -272,10 +278,10 @@
 				</div>
 			</nav>
 
-			<div id="musicAbout" class="container-fluid block1">
+			<div id="musicAbout" class="container-fluid block1 musicBody">
 				<div class="row">
 					<div class="col-md-8 musicAboutMe">
-						<p class="about" style="margin-top: 20%;">Musician and Vocalist with 19 years experience playing, writing, performing and recording. 
+						<p class="about">Musician and Vocalist with 19 years experience playing, performing, recording, and writing. 
 							<br>
 							<strong>Instruments:</strong> Acoustic/Electric/Slide/Lap Steel Guitar, Bass, Drums, Piano, Percussion. 
 							<br>
@@ -283,13 +289,13 @@
 							<br>
 							NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
 							<br>
-							Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On The Roxx, PeaceMaker's Stage. 
+							<strong>Recording:</strong> Capturing, Editing, Mixing, FX, Mastering, Rendering; 
+								<br>
+								Two full LP records of self-produced original music; 50+ self-produced recordings
 							<br>
-							<strong>Recording:</strong> Composition, Recording, Editing, Mixing, FX, Mastering, Rendering; 
+							<strong>Writing:</strong> Composition, both personal and professional, both band and solo settings.
 								<br>
-								The Mad Hatters (2009 - 2011) --> Two full LP records of self-produced original music 
-								<br>
-								Learicist --> 50+ self-produced recordings, Commissioned Bespoke original compositions
+								Commissioned Bespoke original compositions.
 						</p>
 						<h2 style="color: black;"><strong>//\\//\\</strong></h2>
 						<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
@@ -302,7 +308,7 @@
 		</div>
 		<!--end of Page1-->
 
-		<div id="musicPortfolio" class="container-fluid block2 pageTwo musicPage hidden">
+		<div id="musicPortfolio" class="container-fluid block2 pageTwo musicPage musicBody hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
@@ -315,31 +321,32 @@
 					<h4 class="titles">Commission Song for Client</h4>
 					<br>
 					<p class="titles descriptors">Custom Birthday song for client's loved one based off info provided. Everything you hear is me.</p>
-					<iframe 
-						width="560" 
-						height="315" 
-						class="youtubes"
-						src="https://www.youtube.com/embed/QJ-v1gt63nI" 
-						title="YouTube video player" 
-						frameborder="1" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						allowfullscreen>
-					</iframe>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/QJ-v1gt63nI" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
 				</div>
 				<div class="col-md-6 screenshots">
 					<h4 class="titles">Commission Song for Client</h4>
 					<br>
 					<p class="titles descriptors">Custom Birthday song for client's loved one based off info provided. Everything you hear is me.</p>
-					<iframe 
-						width="560" 
-						height="315" 
-						class="youtubes"
-						src="https://www.youtube.com/embed/QJ-v1gt63nI" 
-						title="YouTube video player" 
-						frameborder="1" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						allowfullscreen>
-					</iframe>
+					<div class="tubeBoxes">
+						<iframe  
+							class="youtubes"
+							src="https://www.youtube.com/embed/QJ-v1gt63nI" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+					
 				</div>
 			</div><!--webshots-->
 			<div class="row webshots">
@@ -350,31 +357,34 @@
 						<br>
 						A friend lent her voice for one of the harmonies, all else you hear is me.
 					</p>
-					<iframe 
-						width="560" 
-						height="315" 
-						class="youtubes"
-						src="https://www.youtube.com/embed/BtJXA4_u380" 
-						title="YouTube video player" 
-						frameborder="1" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						allowfullscreen>
-					</iframe>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/BtJXA4_u380" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
 				</div>
 				<div class="col-md-6 screenshots">
 					<h4 class="titles">"What Are You Doing New Year's Eve?" by Frank Loesser</h4>
 					<br>
-					<p class="titles descriptors">My take on a American Standard to celebrate Lunar New Year. Everything you hear is me.</p>
-					<iframe 
-						width="560" 
-						height="315" 
-						class="youtubes"
-						src="https://www.youtube.com/embed/2tlE8UXkEcc" 
-						title="YouTube video player" 
-						frameborder="1" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						allowfullscreen>
-					</iframe>
+					<p class="titles descriptors">My take on a American Standard to celebrate Lunar New Year. 
+						<br>
+						Everything you hear is me.
+					</p>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/2tlE8UXkEcc" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
 				</div>
 			</div><!--webshots-->
 			<!-- <div class="row webshots">
@@ -407,7 +417,7 @@
 		</div>
 		<!--end of page 2-->
 
-		<div id="musicContact" class="container-fluid block3 hidden musicPage contacts">
+		<div id="musicContact" class="container-fluid block3 hidden musicPage musicBody contacts">
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="title">Contact Me</h2>
@@ -424,12 +434,12 @@
 							<input class="textbox" type="text" placeholder="Email Address" required/>
 						</li>
 						<li>
-							<input class="textbox" type="text" placeholder="Phone Number" required/>
+							<input class="textbox" type="text" placeholder="Phone Number (optional)"/>
 						</li>
 						<li>
-							<textarea class="textbox" id="messagebox" type="text" placeholder="Message" required></textarea>
+							<textarea class="textbox messagebox" type="text" placeholder="Message" required></textarea>
 						</li>
-						<button id="send" type="submit">Send</button>
+						<button class="send" type="submit">Send</button>
 					</form>
 				</ul>
 				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding commissioned songs, my projects and experience, or just to talk some Philosophy with me. 
@@ -439,8 +449,7 @@
 			</div>
 		</div>
 
-
-		<div id="musicFindMe" class="container-fluid block4 pageThree musicPage hidden">
+		<div id="musicFindMe" class="container-fluid block4 pageThree musicPage musicBody hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
@@ -468,9 +477,6 @@
 
 
 
-
-
-
 		<a href="javascript:" id="scrollUp">
 			<i class="fas fa-angle-up"></i>
 		</a>
@@ -479,7 +485,7 @@
 	</body>
 
 	<footer>
-		<div class="container-fluid foot">
+		<div class="container-fluid codeBody musicBody foot">
 			<div>
 				<h5 id="copyright">Learicist &copy;2018-2023</h5>
 				<!-- All Rights Reserved -->

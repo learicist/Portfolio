@@ -62,6 +62,20 @@ $(document).ready(function() {
 		}
 	});
 
+	$(".codeBody").on("click", function () {
+		if ($("#codeMenu").attr("aria-expanded") === "true") {
+			console.log('test');
+			$("#codeMenu").trigger("click");
+		}
+	});
+
+	$(".musicBody").on("click", function () {
+		if ($("#musicMenu").attr("aria-expanded") === "true") {
+			console.log('test');
+			$("#musicMenu").trigger("click");
+		}
+	});
+
 
 	$(window).scroll(function() {
 		// If page is scrolled more than 50px
