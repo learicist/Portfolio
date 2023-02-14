@@ -30,7 +30,7 @@
 }
 
 #question {
-  font-size: 4em;
+  font-size: calc(12px + 3.5vw);
   text-shadow: 2px 2px 2px rgb(0, 0, 0 , 0.9);
 }
 
@@ -38,7 +38,7 @@
   color: #000;
   padding: 10px;
   border-radius: 15px;
-  font-size: 2em;
+  font-size: calc(12px + 1.4vw);
   margin: 15px 45px;
   box-shadow: 2px 2px rgb(0, 0, 0, 0.6);
 }
