@@ -67,6 +67,18 @@
   }
 }
 
+@media screen and (max-width:650px) {
+  #accordionRowTriggers {
+    display: block;
+  }
+
+  .triggerDivs {
+    /* padding: 16% auto;
+    border: 5px solid beige; */
+  }
+}
+
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
