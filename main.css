@@ -57,9 +57,13 @@
 }
 
 @media screen and (max-width:1000px) {
-  #myFace {
+  .myFace {
     height:50%;
     width:50%;
+  }
+
+  #myMusicFace {
+    display: none;
   }
 }
 
@@ -85,12 +89,6 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: #202020;
 }
-
-/* body {
-  color: white;
-  
-  background-color: #5a7084;
-} */
 
 #scrollUp {
   z-index:99;
@@ -153,7 +151,7 @@
 }
 
 .navbar-inverse {
-  height:60px;
+  height: 60px;
   opacity: .952;
 }
 
@@ -164,24 +162,19 @@ a {
 
 #eighthnote {
   max-height: 55px;
-  margin-top:-25%;
+  margin-top: -22%;
   border-radius: 5px;
 }
 
-#htmlTags {
-  background-color: white; 
-  color: black; 
-  display: flex;
-  font-size: calc(12px + 1.2vw);
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+#elementTags {
+  max-height: 55px;
+  margin-top: -20%;
 }
 
 #codeMenu {
   border: 0.5px solid white;
   margin-top:12.5px;
-  margin-right:0;
+  margin-right: 0;
 }
 
 #musicMenu {
@@ -195,7 +188,7 @@ span {
 }
 
 .block1 {
-  margin:0 25%;
+  margin: 0 25%;
   background-color: #4c789e;
   /* box-shadow:0px 0px 20px black; */
   color: white;
@@ -206,14 +199,60 @@ span {
   margin-bottom: 5%;
 }
 
-#myFace {
+#myCodeFace {
   border-radius:50%;
   margin: 12% auto 5% auto;
+}
+
+#myMusicFace {
+  border-radius:50%;
+  margin: -35% auto 10% auto;
 }
 
 .about {
   font-size: 1.8em;
   margin-top: 26.5%;
+}
+
+.accordionRow {
+  display: flex;
+  justify-content: center;
+}
+
+#accordionRowCards {
+  margin-top: 25px;
+}
+
+.accordionCards {
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  font-size: calc(10px + 1.1vw);
+  font-weight: 600;
+  padding-top: 10px;
+  box-shadow: 1px 2px 2px rgb(0, 0, 0, 0.6);
+}
+
+.accordions {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.accordionTriggers {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: calc(10px + 1.1vw);
+  border-radius: 5px;
+  padding: 2px 10px;
+  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.6);
+  margin: auto;
+}
+
+.accordionTriggers:hover {
+  background-color: black;
+  color: white;
 }
 
 #myName {
@@ -227,11 +266,12 @@ span {
 /*SECTION 2*/
 
 .pageTwo {
+
 }
 
 .block2 {
   height: 100%;
-  margin: 0 25% 35px 25%;
+  /* margin: 0 25% 35px 25%; */
   background-color: white;
   color: #4c789e;
 }
@@ -321,7 +361,7 @@ img[alt="screenshot of webpage"] {
 .block3 {
   height:100%;
   background-color:#76a1c7;
-  margin:0 25%;
+  /* margin:0 25%; */
   box-shadow:0px 2px 2px black;
 }
 
@@ -392,14 +432,14 @@ img[alt="screenshot of webpage"] {
 }
 
 .block4-text {
-  margin:3% 25%;
+  margin: 3% 25%;
 }
 
 .me {
   background-color: black;
   border-color: black;
   color: #337ab7;
-  font-size: 2.8em;
+  font-size: calc(12px + 1.4vw);
   margin-top:.9em;
 }
 

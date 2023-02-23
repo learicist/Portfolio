@@ -8,7 +8,7 @@
 		<link rel="stylesheet"
 		      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
 		      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-		      crossorigin="anonymous" />
+		      crossorigin="anonymous"/>
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:500" rel="stylesheet">
 		<!--Meta-->
@@ -35,12 +35,12 @@
 	<body>
 		<div class="container-fluid" id="openingQuestion">
 			<div class="row openingPageRow">
-				<div class="col-md-8">
+				<div class="col-md-8" id="questionDiv">
 					<h1 id="question">Who are you here to see?</h1>
 				</div>
 			</div>
 			<div class="row openingPageRow">
-				<div class="col-md-8">
+				<div class="col-md-8" id="choiceDiv">
 					<button class="openingChoice" id="chooseCoding">Michael Leary, 
 						<br>
 						&lt;Web Developer/&gt;
@@ -66,10 +66,11 @@
 							<span class="icon-bar"></span>
 						</button>
 						<!-- CHANGE HREF TO LOAD MUSIC PAGE VIA JS -->
-						<a class="navbar-brand" href="#top">
+						<a class="navbar-brand" href="#">
 							<img
 								id="eighthnote"
-								src="http://atlas-content-cdn.pixelsquid.com/stock-images/eighth-note-musical-5AvDPr9-600.jpg" alt="music note"
+								alt="music note"
+								src="https://res.cloudinary.com/learicist/image/upload/v1677130592/Portfolio/eighth-note-musical-5AvDPr9-600.jpg" 
 							/>
 						</a>
 					</div>
@@ -92,7 +93,7 @@
 						<h3 class="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
 					</div>
 					<div>
-						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+						<img class="col-md-4 img-responsive myFace" id="myCodeFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
 					</div>
 				</div>
 			</div><!--end of about me section-->
@@ -235,6 +236,7 @@
 					<div class="col-md-6 text-center" id="brBlock">
 						<h4># FIND ME #</h4>
 						<div>
+							<!-- REMOVE BTN CLASS FOR FONT SIZE -->
 							<a class="btn btn-default me" target="_blank" href="https://github.com/learicist">GitHub</a>
 							<a class="btn btn-default me" target="_blank" href="https://www.linkedin.com/in/learicist/">LinkedIn</a>
 							<a class="btn btn-default me" target="_blank" href="https://www.instagram.com/learicist/">Instagram</a>
@@ -260,12 +262,14 @@
 							<span class="icon-bar"></span>
 						</button>
 						<!-- CHANGE HREF TO LOAD CODE PAGE VIA JS -->
-						<a class="navbar-brand" id="htmlTags" href="#top">&lt; /&gt;
+						<a class="navbar-brand" id="htmlTags" href="#">
+							<!-- &lt;/&gt; -->
 							<!-- FIND IMAGE OF HTML TAGS -->
-							<!-- <img
+							<img
 								id="elementTags"
-								src="http://atlas-content-cdn.pixelsquid.com/stock-images/eighth-note-musical-5AvDPr9-600.jpg" alt="music note"
-							/> -->
+								alt="coding tags"
+								src="https://res.cloudinary.com/learicist/image/upload/v1677130507/Portfolio/htmlTags.png" 
+							/>
 						</a>
 					</div>
 					<div id="musicHamburger" class="navbar-collapse collapse">
@@ -283,25 +287,61 @@
 					<div class="col-md-8 musicAboutMe">
 						<p class="about">Musician and Vocalist with 19 years experience playing, performing, recording, and writing. 
 							<br>
-							<strong>Instruments:</strong> Acoustic/Electric/Slide/Lap Steel Guitar, Bass, Drums, Piano, Percussion. 
 							<br>
-							<strong>Stage:</strong> 250+ shows in band and solo settings; 
-							<br>
-							NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
-							<br>
-							<strong>Recording:</strong> Capturing, Editing, Mixing, FX, Mastering, Rendering; 
-								<br>
-								Two full LP records of self-produced original music; 50+ self-produced recordings
-							<br>
-							<strong>Writing:</strong> Composition, both personal and professional, both band and solo settings.
-								<br>
-								Commissioned Bespoke original compositions.
 						</p>
-						<h2 style="color: black;"><strong>//\\//\\</strong></h2>
+					</div>
+					<div class="col-md-8">
+						<div class="row accordionRow" id="accordionRowTriggers">
+							<div class="col-md-2 accordions">
+								<button class="accordionTriggers">Instruments:</button> 
+							</div>
+							
+							<div class="col-md-2 accordions">
+								<button class="accordionTriggers">Stage:</button>
+							</div>
+							
+							<div class="col-md-2 accordions">
+								<button class="accordionTriggers">Recording:</button> 
+							</div>
+							
+							<div class="col-md-2 accordions">
+								<button class="accordionTriggers">Writing:</button> 
+							</div>
+						</div>
+
+						<div class="row accordionRow" id="accordionRowCards">
+							<div class="col-md-6 accordions accordionCards hidden" id="instrumentCard">
+								<p>Lead Vocals; Backing Vocals & Harmonies; Acoustic, Electric, Slide, Lap Steel Guitar; Bass; Drums; Piano; Percussion.</p>
+							</div>
+							<div class="col-md-6 accordions accordionCards hidden" id="stageCard">
+								<p>250+ shows in band and solo settings; 
+									<br>
+									NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
+									<br>
+									Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On the Roxx, Peacemaker's Stage 
+								</p>
+							</div>
+							<div class="col-md-6 accordions accordionCards hidden" id="recordingCard">
+								<p>Capturing, Editing, Mixing, FX, Mastering, Rendering; 
+									<br>
+									Two full LP records of self-produced original music; 50+ self-produced recordings
+								</p>
+							</div>
+							<div class="col-md-6 accordions accordionCards hidden" id="writingCard">
+								<p>Composition, both personal and professional, both band and solo settings.
+									<br>
+									Commissioned Bespoke original compositions.
+								</p>
+							</div>
+						</div>
+
+						<h2 style="color: black;">
+							<strong>//\\//\\</strong>
+						</h2>
 						<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
 					</div>
-					<div>
-						<img class="col-md-4 img-responsive" id="myFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+					<div class="col-md-4">
+						<img class="img-responsive myFace" id="myMusicFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
 					</div>
 				</div>
 			</div><!--end of about me section-->
@@ -460,9 +500,9 @@
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
 						<h4 style="margin-top:1.2em" class="text-center bottomLeft">ABOUT THIS PAGE</h4>
-						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to The Impossible Kid 
+						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to "The Impossible Kid"
 							<br>
-							& We Got it from Here, Thank You for Your Service
+							& "We Got it from Here, Thank You for Your Service"
 							<br></br>
 							by
 							<a id="myName" class="btn btn-default" target="_blank" href="https://twitter.com/learicist">Michael Leary</a>

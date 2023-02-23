@@ -1,24 +1,46 @@
 $(document).ready(function() {
 	
-	//IS THIS SHIT WORKING YET?!
-	
 	$(".openingChoice").on({
 		mouseenter: function () {
 			$(this).css("background-color", "black"); 
 			$(this).css("color", "white");
+
+			//If user chooses Developer
 			if (this.id == "chooseCoding") {
 				$(this).click(function () {
-					//console.log("test");
-					// FADEOUT/SETTIMEOUT HERE
-					$("#openingQuestion").addClass("hidden");
-					$(".codePage").removeClass("hidden");
+
+					//Prompts and choices slide away from each other
+					$("#questionDiv").animate({bottom: "450px"}, 2500);
+					$("#choiceDiv").animate({top: "450px"}, 2500);
+
+					//Landing page fades away, switches flip on visibility
+					$("#openingQuestion").fadeOut(2000, "linear", function () {
+						$("#openingQuestion").addClass("hidden");
+						$(".codePage").removeClass("hidden");
+					});
+
+					//Chosen page fades in
+					$(".codePage").fadeIn(3000, "linear");
+					
 				});
+
+			//If user chooses Musician
 			} else if (this.id == "chooseMusic") {
 				$(this).click(function () {
-					//console.log("test");
-					// FADEOUT/SETTIMEOUT HERE
-					$("#openingQuestion").addClass("hidden");
-					$(".musicPage").removeClass("hidden");
+					
+					//Prompts and choices slide away from each other
+					$("#questionDiv").animate({bottom: "450px"}, 2500);
+					$("#choiceDiv").animate({top: "450px"}, 2500);
+
+					//Landing page fades away, switches flip on visibility
+					$("#openingQuestion").fadeOut(2000, "linear", function () {
+						$("#openingQuestion").addClass("hidden");
+						$(".musicPage").removeClass("hidden");
+					});
+
+					//Chosen page fades in
+					$(".musicPage").fadeIn(3500, "linear");
+					
 				});
 			}
 		},
@@ -29,15 +51,28 @@ $(document).ready(function() {
 	});
 
 	$(".navbar-brand").on({
-		// MOUSEENTER STUFF??
-		// ADD FADEOUT/SETTIMEOUT FEATURES
 		click: function () {
 			if ($('.musicPage').hasClass("hidden")) {
-				$(".codePage").addClass("hidden");
-				$(".musicPage").removeClass("hidden");
+
+				//Fade out page user is leaving, flip switches
+				$(".codePage").fadeOut(1500, "linear", function() {
+					$(".codePage").addClass("hidden");
+					$(".musicPage").removeClass("hidden");
+				});
+
+				//Chosen page fades in
+				$(".musicPage").fadeIn(3000, "linear");
+
 			} else if ($('.codePage').hasClass("hidden")) {
-				$(".musicPage").addClass("hidden");
-				$(".codePage").removeClass("hidden");
+
+				//Fade out page user is leaving, flip switches
+				$(".musicPage").fadeOut(1500, "linear", function() {
+					$(".musicPage").addClass("hidden");
+					$(".codePage").removeClass("hidden");
+				});
+
+				//Chosen page fades in
+				$(".codePage").fadeIn(3000, "linear");
 			}
 		}
 	});
@@ -49,6 +84,55 @@ $(document).ready(function() {
 		mouseleave: function() {
 			$(this).css("background-color", "black");
 		}
+	});
+
+	$(".accordionTriggers").on({
+		click: function() {
+			console.log($(this).text());
+			switch ($(this).text()) {
+				case "Instruments:":
+					$("#stageCard").addClass("hidden");
+					$("#recordingCard").addClass("hidden");
+					$("#writingCard").addClass("hidden");
+					if ($("#instrumentCard").hasClass("hidden")) {
+						$("#instrumentCard").removeClass("hidden");
+					} else {
+						$("#instrumentCard").addClass("hidden");
+					}
+					break
+				case "Stage:":
+					$("#instrumentCard").addClass("hidden");
+					$("#recordingCard").addClass("hidden");
+					$("#writingCard").addClass("hidden");
+					if ($("#stageCard").hasClass("hidden")) {
+						$("#stageCard").removeClass("hidden");
+					} else {
+						$("#stageCard").addClass("hidden");
+					}
+					break
+				case "Recording:":
+					$("#instrumentCard").addClass("hidden");
+					$("#stageCard").addClass("hidden");
+					$("#writingCard").addClass("hidden");
+					if ($("#recordingCard").hasClass("hidden")) {
+						$("#recordingCard").removeClass("hidden");
+					} else {
+						$("#recordingCard").addClass("hidden");
+					}
+					break
+				case "Writing:":
+					$("#instrumentCard").addClass("hidden");
+					$("#stageCard").addClass("hidden");
+					$("#recordingCard").addClass("hidden");
+					if ($("#writingCard").hasClass("hidden")) {
+						$("#writingCard").removeClass("hidden");
+					} else {
+						$("#writingCard").addClass("hidden");
+					}
+					break
+			}
+		}
+		
 	});
 
 	$("#myName").on({
@@ -94,6 +178,8 @@ $(document).ready(function() {
 			scrollTop : 0                      
 		}, 500);
 	}); 
+
+	// ADD myMusicFace AFTER fatbottomgirls WHEN WIDTH IS BELOW X
 
 
 });
