@@ -53,9 +53,8 @@
 			</div>
 		</div>
 
-
 		<!-- NAVBAR -->
-		<div class="pageOne text-center codePage hidden">
+		<div class="text-center codePage hidden" id="codePageOne">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div id="nav" class="container">
 					<div class="navbar-header">
@@ -66,7 +65,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<!-- CHANGE HREF TO LOAD MUSIC PAGE VIA JS -->
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" id="eighthNoteBtn" href="#">
 							<img
 								id="eighthnote"
 								alt="music note"
@@ -76,31 +75,44 @@
 					</div>
 					<div id="codeHamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="dropdown"><a href="#codeAbout"><span>About</span></a></li>
-							<li class="dropdown"><a href="#codePortfolio"><span>Portfolio</span></a></li>
-							<li class="dropdown"><a href="#codeContact"><span>Contact</span></a></li>
+							<li class="dropdown">
+								<a class="codeLinks links" id="codeAboutBtn" href="#">
+									<span>About</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="codeLinks links" id="codePortBtn" href="#">
+									<span>Portfolio</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="codeLinks links" id="codeContactBtn" href="#">
+									<span>Contact</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
-
-			<div id="codeAbout" class="container-fluid block1 codeBody">
-				<div class="row">
-					<div class="col-md-8 aboutMe">
-						<p class="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
-						</p>
-						<h2 style="color: black;"><strong>//\\//\\</strong></h2>
-						<h3 class="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
-					</div>
-					<div>
-						<img class="col-md-4 img-responsive myFace" id="myCodeFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
-					</div>
-				</div>
-			</div><!--end of about me section-->
 		</div>
-		<!--end of Page1-->
+		<!--end of Page 1-->	
 
-		<div id="codePortfolio" class="container-fluid block2 pageTwo codePage codeBody hidden">
+		<div id="codePageTwo" class="container-fluid codePage block1 hidden codeBody">
+			<div class="row">
+				<div class="col-md-8 aboutMe">
+					<p class="about">Front End Developer with 5 years of creative and evaluation experience in both corporate and freelance settings. Hands on experience with project builds from scratch to deployment, as well as with evaluating candidates who were then hired to teach at coding bootcamps in Universities across the world. 
+					</p>
+					<h2 style="color: black;"><strong>//\\//\\</strong></h2>
+					<h3 class="fatbottomgirls">Web Development - Commissioned Landing Pages - Website Enhancement</h3>
+				</div>
+				<div>
+					<img class="col-md-4 img-responsive myFace" id="myCodeFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+				</div>
+			</div>
+		</div>
+		<!--End of Page 2-->
+
+		<div id="codePageThree" class="container-fluid block2 codePage codeBody hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
@@ -187,9 +199,9 @@
 				</div>
 			</div><!--webshots-->
 		</div>
-		<!--end of page 2-->
+		<!--End of Page 3-->
 
-		<div id="codeContact" class="container-fluid block3 hidden codePage codeBody contacts">
+		<div id="codePageFour" class="container-fluid block3 hidden codePage codeBody contacts">
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="title">Contact Me</h2>
@@ -220,8 +232,9 @@
 				</h4>
 			</div>
 		</div>
+		<!-- End of Page 4 -->
 
-		<div id="codeFindMe" class="container-fluid block4 pageThree codePage codeBody hidden">
+		<div id="codePageFive" class="container-fluid block4 codePage codeBody hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
@@ -251,7 +264,7 @@
 		================================================================================================================= -->
 
 		<!-- NAVBAR -->
-		<div class="pageOne text-center musicPage hidden">
+		<div class="text-center musicPage hidden" id="musicPageOne">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div id="nav" class="container">
 					<div class="navbar-header">
@@ -274,81 +287,94 @@
 					</div>
 					<div id="musicHamburger" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="dropdown"><a href="#musicAbout"><span>About</span></a></li>
-							<li class="dropdown"><a href="#musicPortfolio"><span>Portfolio</span></a></li>
-							<li class="dropdown"><a href="#musicContact"><span>Contact</span></a></li>
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicAboutBtn" href="#">
+									<span>About</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicPortBtn" href="#">
+									<span>Portfolio</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicContactBtn" href="#">
+									<span>Contact</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
-
-			<div id="musicAbout" class="container-fluid block1 musicBody">
-				<div class="row">
-					<div class="col-md-8 musicAboutMe">
-						<p class="about">Musician and Vocalist with 19 years experience playing, performing, recording, and writing. 
-							<br>
-							<br>
-						</p>
-					</div>
-					<div class="col-md-8">
-						<div class="row accordionRow" id="accordionRowTriggers">
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Instruments:</button> 
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Stage:</button>
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Recording:</button> 
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Writing:</button> 
-							</div>
-						</div>
-
-						<div class="row accordionRow" id="accordionRowCards">
-							<div class="col-md-6 accordions accordionCards hidden" id="instrumentCard">
-								<p>Lead Vocals; Backing Vocals & Harmonies; Acoustic, Electric, Slide, Lap Steel Guitar; Bass; Drums; Piano; Percussion.</p>
-							</div>
-							<div class="col-md-6 accordions accordionCards hidden" id="stageCard">
-								<p>250+ shows in band and solo settings; 
-									<br>
-									NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
-									<br>
-									Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On the Roxx, Peacemaker's Stage 
-								</p>
-							</div>
-							<div class="col-md-6 accordions accordionCards hidden" id="recordingCard">
-								<p>Capturing, Editing, Mixing, FX, Mastering, Rendering; 
-									<br>
-									Two full LP records of self-produced original music; 50+ self-produced recordings
-								</p>
-							</div>
-							<div class="col-md-6 accordions accordionCards hidden" id="writingCard">
-								<p>Composition, both personal and professional, both band and solo settings.
-									<br>
-									Commissioned Bespoke original compositions.
-								</p>
-							</div>
-						</div>
-
-						<h2 style="color: black;">
-							<strong>//\\//\\</strong>
-						</h2>
-						<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
-					</div>
-					<div class="col-md-4">
-						<img class="img-responsive myFace" id="myMusicFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
-					</div>
-				</div>
-			</div><!--end of about me section-->
 		</div>
 		<!--end of Page1-->
 
-		<div id="musicPortfolio" class="container-fluid block2 pageTwo musicPage musicBody hidden">
+		<div id="musicPageTwo" class="container-fluid musicPage block1 hidden musicBody">
+			<div class="row">
+				<div class="col-md-8 musicAboutMe">
+					<p class="about">Musician and Vocalist with 19 years experience playing, performing, recording, and writing. 
+						<br>
+						<br>
+					</p>
+				</div>
+				<div class="col-md-8">
+					<div class="row accordionRow" id="accordionRowTriggers">
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Instruments:</button> 
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Stage:</button>
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Recording:</button> 
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Writing:</button> 
+						</div>
+					</div>
+
+					<div class="row accordionRow" id="accordionRowCards">
+						<div class="col-md-6 accordions accordionCards hidden" id="instrumentCard">
+							<p>Lead Vocals; Backing Vocals & Harmonies; Acoustic, Electric, Slide, Lap Steel Guitar; Bass; Drums; Piano; Percussion.</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="stageCard">
+							<p>250+ shows in band and solo settings; 
+								<br>
+								NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
+								<br>
+								Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On the Roxx, Peacemaker's Stage 
+							</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="recordingCard">
+							<p>Capturing, Editing, Mixing, FX, Mastering, Rendering; 
+								<br>
+								Two full LP records of self-produced original music; 50+ self-produced recordings
+							</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="writingCard">
+							<p>Composition, both personal and professional, both band and solo settings.
+								<br>
+								Commissioned Bespoke original compositions.
+							</p>
+						</div>
+					</div>
+
+					<h2 style="color: black;">
+						<strong>//\\//\\</strong>
+					</h2>
+					<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
+				</div>
+				<div class="col-md-4">
+					<img class="img-responsive myFace" id="myMusicFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+				</div>
+			</div>
+		</div>
+		<!--End of Page 2-->
+		
+		<div id="musicPageThree" class="container-fluid block2 musicPage musicBody hidden">
 			<div id="portRow" class="row">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
@@ -461,9 +487,9 @@
 			</div> -->
 			<!--webshots-->
 		</div>
-		<!--end of page 2-->
+		<!--end of page 3-->
 
-		<div id="musicContact" class="container-fluid block3 hidden musicPage musicBody contacts">
+		<div id="musicPageFour" class="container-fluid block3 hidden musicPage musicBody contacts">
 			<div class="row">
 				<div class="col-md-12">
 					<h2 class="title">Contact Me</h2>
@@ -494,8 +520,9 @@
 				</h4>
 			</div>
 		</div>
+		<!-- End of Page 4 -->
 
-		<div id="musicFindMe" class="container-fluid block4 pageThree musicPage musicBody hidden">
+		<div id="musicPageFive" class="container-fluid block4 musicPage musicBody hidden">
 			<div class="container-fluid block4-text">
 				<div class="row">
 					<div class="col-md-6" id="blBlock">

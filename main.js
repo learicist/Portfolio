@@ -16,12 +16,11 @@ $(document).ready(function() {
 					//Landing page fades away, switches flip on visibility
 					$("#openingQuestion").fadeOut(2000, "linear", function () {
 						$("#openingQuestion").addClass("hidden");
-						$(".codePage").removeClass("hidden");
+						$("#codePageOne, #codePageTwo, #codePageFive").removeClass("hidden");
 					});
 
 					//Chosen page fades in
-					$(".codePage").fadeIn(3000, "linear");
-					
+					$("#codePageTwo, #codePageFive").fadeIn(3000, "linear");					
 				});
 
 			//If user chooses Musician
@@ -35,12 +34,11 @@ $(document).ready(function() {
 					//Landing page fades away, switches flip on visibility
 					$("#openingQuestion").fadeOut(2000, "linear", function () {
 						$("#openingQuestion").addClass("hidden");
-						$(".musicPage").removeClass("hidden");
+						$("#musicPageOne, #musicPageTwo, #musicPageFive").removeClass("hidden");
 					});
 
 					//Chosen page fades in
-					$(".musicPage").fadeIn(3500, "linear");
-					
+					$("#musicPageTwo, #musicPageFive").fadeIn(3500, "linear");					
 				});
 			}
 		},
@@ -50,33 +48,43 @@ $(document).ready(function() {
 		}
 	});
 
+	//User clicks logo icon
 	$(".navbar-brand").on({
 		click: function () {
-			if ($('.musicPage').hasClass("hidden")) {
+			console.log("I was clicked bitch");
+			//If Coding Page is on screen
+			if (this.id == "eighthNoteBtn") {
 
 				//Fade out page user is leaving, flip switches
-				$(".codePage").fadeOut(1500, "linear", function() {
+				$(".codePage").fadeOut(1000, "linear", function() {
 					$(".codePage").addClass("hidden");
-					$(".musicPage").removeClass("hidden");
+					$("#musicPageOne, #musicPageTwo, #musicPageFive").removeClass("hidden");
 				});
 
-				//Chosen page fades in
-				$(".musicPage").fadeIn(3000, "linear");
+				//Navbar fades in earlier
+				$("#musicPageOne").fadeIn(800, "linear");
 
-			} else if ($('.codePage').hasClass("hidden")) {
+				//Chosen page fades in
+				$("#musicPageTwo, #musicPageFive").fadeIn(2000, "linear");
+
+			} else if (this.id == "htmlTags") {
 
 				//Fade out page user is leaving, flip switches
-				$(".musicPage").fadeOut(1500, "linear", function() {
+				$(".musicPage").fadeOut(1000, "linear", function() {
 					$(".musicPage").addClass("hidden");
-					$(".codePage").removeClass("hidden");
+					$("#codePageOne, #codePageTwo, #codePageFive").removeClass("hidden");
 				});
 
+				//Navbar fades in earlier
+				$("#codePageOne").fadeIn(800, "linear");
+
 				//Chosen page fades in
-				$(".codePage").fadeIn(3000, "linear");
+				$("#codePageTwo, #codePageFive").fadeIn(2000, "linear");
 			}
 		}
 	});
 
+	//Hover on Nav options
 	$(".dropdown").on({
 		mouseenter: function() {
 			$(this).css("background-color", "white");
@@ -86,6 +94,57 @@ $(document).ready(function() {
 		}
 	});
 
+	//User chooses Nav options
+	$(".codeLinks").on({
+		click: function() {
+			console.log($(this).attr("id"));
+			//If chosen button ...
+			switch ($(this).attr("id")) {
+				//...is About
+				case "codeAboutBtn":
+					$("#codePageTwo").removeClass("hidden");
+					$("#codePageThree, #codePageFour").addClass("hidden");
+					break
+				//...is Portfolio
+				case "codePortBtn":
+					$("#codePageThree").removeClass("hidden");
+					$("#codePageTwo, #codePageFour").addClass("hidden");
+					break
+				//...is Contact
+				case "codeContactBtn":
+					$("#codePageFour").removeClass("hidden");
+					$("#codePageTwo, #codePageThree").addClass("hidden");
+					break
+			}
+		}
+	});
+
+	$(".musicLinks").on({
+		click: function () {
+			console.log("music link clicked, codepage has hidden");
+			//If chosen button...
+			switch ($(this).attr("id")) {
+				//...is About
+				case "musicAboutBtn":
+					console.log("music link clicked, codepage has hidden, about btn clicked");
+					$("#musicPageTwo").removeClass("hidden");
+					$("#musicPageThree, #musicPageFour").addClass("hidden");
+					break
+				//...is Portfolio
+				case "musicPortBtn":
+					$("#musicPageThree").removeClass("hidden");
+					$("#musicPageTwo, #musicPageFour").addClass("hidden");
+					break
+				//...is Contact
+				case "musicContactBtn":
+					$("#musicPageFour").removeClass("hidden");
+					$("#musicPageTwo, #musicPageThree").addClass("hidden");
+					break
+			}
+		}
+	});
+
+	//Music page release of info
 	$(".accordionTriggers").on({
 		click: function() {
 			console.log($(this).text());
@@ -135,6 +194,7 @@ $(document).ready(function() {
 		
 	});
 
+	//Name at bottom of page
 	$("#myName").on({
 		mouseenter: function() {
 			$(this).css("background-color", "white");
@@ -146,6 +206,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//Snap hamburger back in (mostly for mobile users)
 	$(".codeBody").on("click", function () {
 		if ($("#codeMenu").attr("aria-expanded") === "true") {
 			console.log('test');
@@ -153,6 +214,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//Same as above
 	$(".musicBody").on("click", function () {
 		if ($("#musicMenu").attr("aria-expanded") === "true") {
 			console.log('test');
