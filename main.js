@@ -104,16 +104,19 @@ $(document).ready(function() {
 				case "codeAboutBtn":
 					$("#codePageTwo").removeClass("hidden");
 					$("#codePageThree, #codePageFour").addClass("hidden");
+					$("#codeMenu").trigger("click");
 					break
 				//...is Portfolio
 				case "codePortBtn":
 					$("#codePageThree").removeClass("hidden");
 					$("#codePageTwo, #codePageFour").addClass("hidden");
+					$("#codeMenu").trigger("click");
 					break
 				//...is Contact
 				case "codeContactBtn":
 					$("#codePageFour").removeClass("hidden");
 					$("#codePageTwo, #codePageThree").addClass("hidden");
+					$("#codeMenu").trigger("click");
 					break
 			}
 		}
@@ -129,16 +132,19 @@ $(document).ready(function() {
 					console.log("music link clicked, codepage has hidden, about btn clicked");
 					$("#musicPageTwo").removeClass("hidden");
 					$("#musicPageThree, #musicPageFour").addClass("hidden");
+					$("#musicMenu").trigger("click");
 					break
 				//...is Portfolio
 				case "musicPortBtn":
 					$("#musicPageThree").removeClass("hidden");
 					$("#musicPageTwo, #musicPageFour").addClass("hidden");
+					$("#musicMenu").trigger("click");
 					break
 				//...is Contact
 				case "musicContactBtn":
 					$("#musicPageFour").removeClass("hidden");
 					$("#musicPageTwo, #musicPageThree").addClass("hidden");
+					$("#musicMenu").trigger("click");
 					break
 			}
 		}
