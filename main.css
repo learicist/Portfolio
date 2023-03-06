@@ -88,7 +88,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #4c789e; 
+	background: rgb(76, 120, 158); 
 }
 
 /* Handle */
@@ -106,7 +106,7 @@
   z-index:99;
   border-radius:50%;
   background-color:rgba(255, 255, 255, 0.8);
-  color:#5a7084;
+  color:rgb(90, 112, 132);
   position: fixed;
   bottom: 20px;
   right: 20px;

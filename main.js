@@ -20,7 +20,8 @@ $(document).ready(function() {
 					});
 
 					//Chosen page fades in
-					$("#codePageTwo, #codePageFive").fadeIn(3000, "linear");					
+					$("#codePageTwo, #codePageFive").fadeIn(3000, "linear");	
+					$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");				
 				});
 
 			//If user chooses Musician
@@ -38,7 +39,8 @@ $(document).ready(function() {
 					});
 
 					//Chosen page fades in
-					$("#musicPageTwo, #musicPageFive").fadeIn(3500, "linear");					
+					$("#musicPageTwo, #musicPageFive").fadeIn(3500, "linear");	
+					$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");			
 				});
 			}
 		},
@@ -66,6 +68,7 @@ $(document).ready(function() {
 
 				//Chosen page fades in
 				$("#musicPageTwo, #musicPageFive").fadeIn(2000, "linear");
+				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");
 
 			} else if (this.id == "htmlTags") {
 
@@ -80,6 +83,7 @@ $(document).ready(function() {
 
 				//Chosen page fades in
 				$("#codePageTwo, #codePageFive").fadeIn(2000, "linear");
+				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");
 			}
 		}
 	});
