@@ -341,7 +341,8 @@ span {
 img[alt="screenshot of webpage"] {
   border: 2px solid white;
   border-radius: 15px;
-  min-height: 100%;
+  /* min-height: 100%; */
+  max-height: 45vh;
 }
 
 .tubeBoxes {
