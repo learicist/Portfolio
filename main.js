@@ -205,14 +205,21 @@ $(document).ready(function() {
 	});
 
 	//Name at bottom of page
-	$("#myName").on({
+	$(".myName").on({
 		mouseenter: function() {
-			$(this).css("background-color", "white");
-			$(this).css("color", "black");
+			$(this).css({
+				backgroundColor: "white",
+				color: "black",
+				textDecoration: "none",
+				padding: "5px",
+				borderRadius: "5px"
+			})
 		},
 		mouseleave: function() {
-			$(this).css("background-color", "#3374ad");
-			$(this).css("color", "white");
+			$(this).css({
+				backgroundColor: "transparent",
+				color: "white"
+			})
 		}
 	});
 

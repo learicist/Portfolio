@@ -167,7 +167,7 @@
   opacity: .952;
 }
 
-a {
+#nav a {
   font-family: 'Lobster Two';
   color: #337ab7;
 }
@@ -271,7 +271,7 @@ span {
   color: white;
 }
 
-#myName {
+.myName {
   color: white;
   font-size: 1.2em;
   font-family: serif;
@@ -448,11 +448,19 @@ img[alt="screenshot of webpage"] {
 }
 
 .me {
-  background-color: black;
   border-color: black;
+  color: black;
+  font-size: calc(12px + 0.6vw);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Lobster Two';
+  margin: 0.9em 0.5em 0 0.5em;
+}
+
+.me:hover, .me:focus {
+  text-decoration: none;
+  background-color: black;
   color: #337ab7;
-  font-size: calc(12px + 1.4vw);
-  margin-top:.9em;
 }
 
 /*Footer*/
