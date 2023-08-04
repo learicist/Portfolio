@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio for learicist</title>
+		<link rel="stylesheet" href="main.css" type="text/css">
+		<!-- FAVICON TO START -->
+        <link 
+			rel="shortcut icon" 
+			type="image/x-icon" 
+			id="favicon"
+			href="https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico" />
+		<!--Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+		<link rel="stylesheet"
+		      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		      crossorigin="anonymous"/>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:500" rel="stylesheet">
+		<!--Meta-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<!--Bootstrap & jQuery-->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous">
+		</script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+			crossorigin="anonymous">
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous">
+		</script>
+	</head>
+
+	<body>
+        <!-- NAVBAR -->
+		<div class="text-center musicPage " id="musicPageOne">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div id="nav" class="container">
+					<div class="navbar-header">
+						<button id="musicMenu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#musicHamburger" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- CHANGE HREF TO LOAD CODE PAGE VIA JS -->
+						<a class="navbar-brand" id="htmlTags" href="#">
+							<!-- &lt;/&gt; -->
+							<!-- FIND IMAGE OF HTML TAGS -->
+							<img
+								id="elementTags"
+								alt="coding tags"
+								src="https://res.cloudinary.com/learicist/image/upload/v1677130507/Portfolio/htmlTags.png" 
+							/>
+						</a>
+					</div>
+					<div id="musicHamburger" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicAboutBtn" href="#">
+									<span>About</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicPortBtn" href="#">
+									<span>Portfolio</span>
+								</a>
+							</li>
+							<li class="dropdown">
+								<a class="musicLinks links" id="musicContactBtn" href="#">
+									<span>Contact</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!--end of Page1-->
+
+		<div id="musicPageTwo" class="container-fluid musicPage block1  musicBody">
+			<div class="row">
+				<div class="col-md-8 musicAboutMe">
+					<p class="about">Musician and Vocalist with 19 years experience playing, performing, recording, and writing. 
+						<br>
+						<br>
+					</p>
+				</div>
+				<div class="col-md-8">
+					<div class="row accordionRow" id="accordionRowTriggers">
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Instruments:</button> 
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Stage:</button>
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Recording:</button> 
+						</div>
+						
+						<div class="col-md-2 accordions triggerDivs">
+							<button class="accordionTriggers">Writing:</button> 
+						</div>
+					</div>
+
+					<div class="row accordionRow" id="accordionRowCards">
+						<div class="col-md-6 accordions accordionCards hidden" id="instrumentCard">
+							<p>Lead Vocals; Backing Vocals & Harmonies; Acoustic, Electric, Slide, Lap Steel Guitar; Bass; Drums; Piano; Percussion.</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="stageCard">
+							<p>250+ shows in band and solo settings; 
+								<br>
+								NYC --> Bowery Poetry Club, Crash Mansion, The Delancy; 
+								<br>
+								Binghamton, NY --> Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On the Roxx, Peacemaker's Stage 
+							</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="recordingCard">
+							<p>Capturing, Editing, Mixing, FX, Mastering, Rendering; 
+								<br>
+								Two full LP records of self-produced original music; 50+ self-produced recordings
+							</p>
+						</div>
+						<div class="col-md-6 accordions accordionCards hidden" id="writingCard">
+							<p>Composition, both personal and professional, both band and solo settings.
+								<br>
+								Commissioned Bespoke original compositions.
+							</p>
+						</div>
+					</div>
+
+					<h2 style="color: black;">
+						<strong>//\\//\\</strong>
+					</h2>
+					<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
+				</div>
+				<div class="col-md-4">
+					<img class="img-responsive myFace" id="myMusicFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+				</div>
+			</div>
+		</div>
+		<!--End of Page 2-->
+		
+		<div id="musicPageThree" class="container-fluid block2 musicPage musicBody hidden">
+			<div id="portRow" class="row">
+				<div id="portBox" class="col-md-6">
+					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
+					<h3 class="port" style="margin-bottom: 2%; color: black;"><strong>//\\//\\</strong></h3>
+					<h4 class="port">Click each one to explore further</h4>
+				</div>
+			</div>
+			<!--portRow-->
+
+			<div class="row webshots">
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">"Into The Void" by Black Sabbath</h4>
+					<br>
+					<p class="titles descriptors">Independent Recording of an absolute powerhouse track from the legends themselves. 
+						<br>
+						Featuring @snakeandhatter (Instagram) on bass, all else is me.
+					</p>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/8YqYVIaxLVE" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Commission Song for Client</h4>
+					<br>
+					<p class="titles descriptors">Custom Original Birthday song for client's loved one based off info provided. 
+						<br>
+						Everything you hear is me.
+					</p>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/uDWDY9JZ2Yw" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+			<!--webshots-->
+
+			<div class="row webshots">
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">Commission Song for Client</h4>
+					<br>
+					<p class="titles descriptors">Custom Original Birthday song for client's loved one based off info provided. 
+						<br>
+						Everything you hear is me.
+					</p>
+					<div class="tubeBoxes">
+						<iframe  
+							class="youtubes"
+							src="https://www.youtube.com/embed/QJ-v1gt63nI" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+				<div class="col-md-6 screenshots">
+					<h4 class="titles">"The Letter" by Joe Cocker</h4>
+					<br>
+					<p class="titles descriptors">My take on a tune originally written by The Box Tops in the 60's. 
+						<br>
+						A friend lent her voice for one of the harmonies, all else you hear is me.
+					</p>
+					<div class="tubeBoxes">
+						<iframe 
+							class="youtubes"
+							src="https://www.youtube.com/embed/BtJXA4_u380" 
+							title="YouTube video player" 
+							frameborder="1" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+			<!--webshots-->
+		</div>
+		<!--end of page 3-->
+
+		<div id="musicPageFour" class="container-fluid block3 hidden musicPage musicBody contacts">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="title">Contact Me</h2>
+					<h3 class=""><strong>//\\//\\</strong></h3>
+				</div>
+			</div>
+			<div style="margin-bottom:10px" class="row">
+				<ul id="musicInputs" class="col-md-6 inputs">
+					<form action="https://formspree.io/f/moqzenqo" method="POST">
+						<li>
+							<input class="textbox" type="text" name="Name" placeholder="Name" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" name="Email" placeholder="Email Address" required/>
+						</li>
+						<li>
+							<input class="textbox" type="text" name="Phone" placeholder="Phone Number (optional)"/>
+						</li>
+						<li>
+							<textarea class="textbox messagebox" type="text" name="message" placeholder="Message" required></textarea>
+						</li>
+						<button class="send" name="sendBtn" type="submit">Send</button>
+					</form>
+				</ul>
+				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding commissioned songs, my projects and experience, or just to talk some Philosophy with me. 
+					<br><br>
+					I would be happy to hear from you and address any questions or curiosities you may have. L<span style="color:orange">e</span>t'<span style="color:orange">s</span> g<span style="color:orange">o</span> M<span style="color:orange">e</span>t<span style="color:orange">s</span>!
+				</h4>
+			</div>
+		</div>
+		<!-- End of Page 4 -->
+
+		<div id="musicPageFive" class="container-fluid block4 musicPage musicBody ">
+			<div class="container-fluid block4-text">
+				<div class="row">
+					<div class="col-md-6" id="blBlock">
+						<h4 style="margin-top:1.2em" class="text-center bottomLeft">ABOUT THIS PAGE</h4>
+						<p class="text-center bottomLeft" style="font-size:1.25em">Made while listening exclusively to "The Impossible Kid"
+							<br>
+							& "We Got it from Here, Thank You for Your Service"
+							<br></br>
+							by
+							<a class="myName" class="btn btn-default" target="_blank" href="https://twitter.com/learicist">Michael Leary</a>
+						</p>
+					</div>
+
+					<div class="col-md-6 text-center" id="brBlock">
+						<h4># FIND ME #</h4>
+						<div>
+							<a class="btn-default me" target="_blank" href="https://www.instagram.com/thelearicist/">Instagram</a>
+							<a class="btn-default me" target="_blank" href="https://www.youtube.com/@learicist">YouTube</a>
+							<a class="btn-default me" target="_blank" href="https://soundcloud.com/learicist">SoundCloud</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<a href="javascript:" id="scrollUp">
+			<i class="fas fa-angle-up"></i>
+		</a>
+
+		<script src="main.js"></script>
+	</body>
+
+	<footer>
+		<div class="container-fluid codeBody musicBody foot">
+			<div>
+				<h5 id="copyright">Learicist &copy;2018-2023</h5>
+				<!-- All Rights Reserved -->
+			</div>
+		</div>
+	</footer>
+</html>

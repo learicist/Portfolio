@@ -4,46 +4,45 @@ $(document).ready(function() {
 		mouseenter: function () {
 			$(this).css("background-color", "black"); 
 			$(this).css("color", "white");
+		},
 
-			//If user chooses Developer
+		//If user chooses Developer
+		click: function () {
 			if (this.id == "chooseCoding") {
-				$(this).click(function () {
+				//Prompts and choices slide away from each other
+				$("#questionDiv").animate({bottom: "450px"}, 2500);
+				$("#choiceDiv").animate({top: "450px"}, 2500);
 
-					//Prompts and choices slide away from each other
-					$("#questionDiv").animate({bottom: "450px"}, 2500);
-					$("#choiceDiv").animate({top: "450px"}, 2500);
-
-					//Landing page fades away, switches flip on visibility
-					$("#openingQuestion").fadeOut(2000, "linear", function () {
-						$("#openingQuestion").addClass("hidden");
-						$("#codePageOne, #codePageTwo, #codePageFive").removeClass("hidden");
-					});
-
+				//Landing page fades away, switches flip on visibility
+				$("html").fadeOut(2000, "linear", function () {
+					//$("#openingQuestion").addClass("hidden");
+					//$("#codePageOne, #codePageTwo, #codePageFive").removeClass("hidden");
 					//Chosen page fades in
-					$("#codePageTwo, #codePageFive").fadeIn(3000, "linear");	
-					$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");				
+					//$("webDev.html").fadeIn(3000, "linear");
+					window.location = "webDev.html";
 				});
-
+					
+				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");	
+			
 			//If user chooses Musician
 			} else if (this.id == "chooseMusic") {
-				$(this).click(function () {
-					
-					//Prompts and choices slide away from each other
-					$("#questionDiv").animate({bottom: "450px"}, 2500);
-					$("#choiceDiv").animate({top: "450px"}, 2500);
+				//Prompts and choices slide away from each other
+				$("#questionDiv").animate({bottom: "450px"}, 2500);
+				$("#choiceDiv").animate({top: "450px"}, 2500);
 
-					//Landing page fades away, switches flip on visibility
-					$("#openingQuestion").fadeOut(2000, "linear", function () {
-						$("#openingQuestion").addClass("hidden");
-						$("#musicPageOne, #musicPageTwo, #musicPageFive").removeClass("hidden");
-					});
-
-					//Chosen page fades in
-					$("#musicPageTwo, #musicPageFive").fadeIn(3500, "linear");	
-					$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");			
+				//Landing page fades away, switches flip on visibility
+				$("html").fadeOut(2000, "linear", function () {
+					// $("#openingQuestion").addClass("hidden");
+					// $("#musicPageOne, #musicPageTwo, #musicPageFive").removeClass("hidden");
+					window.location = "music.html";
 				});
+
+				//Chosen page fades in
+				//$("music.html").fadeIn(3500, "linear");	
+				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");
 			}
 		},
+
 		mouseleave: function () {
 			$(this).css("background-color", "white");
 			$(this).css("color", "black");
@@ -52,37 +51,40 @@ $(document).ready(function() {
 
 	//User clicks logo icon
 	$(".navbar-brand").on({
-		click: function () {
-			console.log("I was clicked bitch");
+		click: function (e) {
+			e.preventDefault();
+			//console.log("I was clicked bitch");
 			//If Coding Page is on screen
 			if (this.id == "eighthNoteBtn") {
 
 				//Fade out page user is leaving, flip switches
-				$(".codePage").fadeOut(1000, "linear", function() {
+				$("html").fadeOut(1000, "linear", function() {
 					$(".codePage").addClass("hidden");
-					$("#musicPageOne, #musicPageTwo, #musicPageFive").removeClass("hidden");
+					//$("#musicPageOne, #musicPageTwo, #musicPageFour, #musicPageFive").removeClass("hidden");
+					window.location = "music.html";
 				});
 
 				//Navbar fades in earlier
-				$("#musicPageOne").fadeIn(800, "linear");
+				//$("#musicPageOne").fadeIn(800, "linear");
 
 				//Chosen page fades in
-				$("#musicPageTwo, #musicPageFive").fadeIn(2000, "linear");
+				//$("#musicPageTwo, #musicPageFive").fadeIn(2000, "linear");
 				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");
 
 			} else if (this.id == "htmlTags") {
 
 				//Fade out page user is leaving, flip switches
-				$(".musicPage").fadeOut(1000, "linear", function() {
+				$("html").fadeOut(1000, "linear", function() {
 					$(".musicPage").addClass("hidden");
-					$("#codePageOne, #codePageTwo, #codePageFive").removeClass("hidden");
+					//$("#codePageOne, #codePageTwo, #codePageFour, #codePageFive").removeClass("hidden");
+					window.location = "webDev.html";
 				});
 
 				//Navbar fades in earlier
-				$("#codePageOne").fadeIn(800, "linear");
+				//$("#codePageOne").fadeIn(800, "linear");
 
 				//Chosen page fades in
-				$("#codePageTwo, #codePageFive").fadeIn(2000, "linear");
+				//$("#codePageTwo, #codePageFive").fadeIn(2000, "linear");
 				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");
 			}
 		}
@@ -100,7 +102,8 @@ $(document).ready(function() {
 
 	//User chooses Nav options
 	$(".codeLinks").on({
-		click: function() {
+		click: function(e) {
+			e.preventDefault();
 			console.log($(this).attr("id"));
 			//If chosen button ...
 			switch ($(this).attr("id")) {
@@ -127,7 +130,8 @@ $(document).ready(function() {
 	});
 
 	$(".musicLinks").on({
-		click: function () {
+		click: function (e) {
+			e.preventDefault();
 			console.log("music link clicked, codepage has hidden");
 			//If chosen button...
 			switch ($(this).attr("id")) {
