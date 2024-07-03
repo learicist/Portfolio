@@ -10,7 +10,8 @@
 /* HIDE PAGE UNTIL USER CHOICE */
 .hidden {
   display: none;
-}
+  visibility: hidden;
+} 
 
 
 /* OPENING PAGE */
@@ -72,10 +73,10 @@
     display: block;
   }
 
-  .triggerDivs {
-    /* padding: 16% auto;
-    border: 5px solid beige; */
-  }
+  /* .triggerDivs {
+    padding: 16% auto;
+    border: 5px solid beige; 
+  } */
 }
 
 
@@ -226,7 +227,7 @@ span {
 }
 
 .about {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-top: 26.5%;
 }
 
@@ -269,6 +270,31 @@ span {
 .accordionTriggers:hover {
   background-color: black;
   color: white;
+}
+
+.venueLink {
+  border-radius: 5px;
+}
+
+.venueLink:hover {
+  background-color: white;
+  color: black;
+}
+
+#stageCard {
+  display: block;
+}
+
+.venueLink {
+  font-size: calc(10px + 0.6vw);
+  margin: 10px auto;
+  background-color: #000;
+  color: white;
+  padding: 5px;
+}
+
+.venueList {
+  font-size: calc(10px + 0.5vw);
 }
 
 .myName {
@@ -447,10 +473,15 @@ img[alt="screenshot of webpage"] {
   margin: 3% 25%;
 }
 
+#brBlock h4{
+  color: white;
+  margin-bottom: 25px;
+}
+
 .me {
   border-color: black;
-  color: black;
-  font-size: calc(12px + 0.6vw);
+  color: white;
+  font-size: calc(12px + 1.4vw);
   border-radius: 5px;
   padding: 5px;
   font-family: 'Lobster Two';
@@ -459,8 +490,8 @@ img[alt="screenshot of webpage"] {
 
 .me:hover, .me:focus {
   text-decoration: none;
-  background-color: black;
-  color: #337ab7;
+  color: black;
+  /* color: #337ab7; */
 }
 
 /*Footer*/
