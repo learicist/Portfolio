@@ -230,6 +230,15 @@ $(document).ready(function() {
 		}
 	});
 
+	// Change size of accordion reveal div for mobile
+	if (window.innerWidth <= 650) {
+		$(".accordionCards").removeClass("col-md-8");
+		$(".accordionCards").addClass("col-md-4");
+	} else if (window.innerWidth > 651) {
+		$(".accordionCards").removeClass("col-md-4");
+		$(".accordionCards").addClass("col-md-8");
+	}
+
 	//Name at bottom of page
 	$(".myName").on({
 		mouseenter: function() {
