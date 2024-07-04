@@ -69,14 +69,18 @@
 }
 
 @media screen and (max-width:650px) {
-  #accordionRowTriggers {
-    display: block;
+  .accordionRowTriggers {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* .triggerDivs {
-    padding: 16% auto;
-    border: 5px solid beige; 
-  } */
+  .triggerDivs {
+    margin: 16% auto;
+  }
 }
 
 

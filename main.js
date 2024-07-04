@@ -164,44 +164,44 @@ $(document).ready(function() {
 			console.log($(this).text());
 			switch ($(this).text()) {
 				case "Instruments:":
-					$(".accordionCards").addClass("hidden");
 					// $("#stageCard").addClass("hidden");
 					// $("#recordingCard").addClass("hidden");
 					// $("#writingCard").addClass("hidden");
 					if ($("#instrumentCard").hasClass("hidden")) {
+						$(".accordionCards").addClass("hidden");
 						$("#instrumentCard").removeClass("hidden");
 					} else {
 						$("#instrumentCard").addClass("hidden");
 					}
 					break
 				case "Stage:":
-					$(".accordionCards").addClass("hidden");
 					// $("#instrumentCard").addClass("hidden");
 					// $("#recordingCard").addClass("hidden");
 					// $("#writingCard").addClass("hidden");
 					if ($("#stageCard").hasClass("hidden")) {
+						$(".accordionCards").addClass("hidden");
 						$("#stageCard").removeClass("hidden");
 					} else {
 						$("#stageCard").addClass("hidden");
 					}
 					break
 				case "Recording:":
-					$(".accordionCards").addClass("hidden");
 					// $("#instrumentCard").addClass("hidden");
 					// $("#stageCard").addClass("hidden");
 					// $("#writingCard").addClass("hidden");
 					if ($("#recordingCard").hasClass("hidden")) {
+						$(".accordionCards").addClass("hidden");
 						$("#recordingCard").removeClass("hidden");
 					} else {
 						$("#recordingCard").addClass("hidden");
 					}
 					break
 				case "Writing:":
-					$(".accordionCards").addClass("hidden");
 					// $("#instrumentCard").addClass("hidden");
 					// $("#stageCard").addClass("hidden");
 					// $("#recordingCard").addClass("hidden");
 					if ($("#writingCard").hasClass("hidden")) {
+						$(".accordionCards").addClass("hidden");
 						$("#writingCard").removeClass("hidden");
 					} else {
 						$("#writingCard").addClass("hidden");
