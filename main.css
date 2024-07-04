@@ -179,6 +179,10 @@
   border-radius: 5px;
 }
 
+.flatIcons {
+  width: 4.5%;
+}
+
 #elementTags {
   max-height: 52px;
   /* max-width: 60px; */
@@ -228,7 +232,7 @@ span {
 
 .about {
   font-size: 2em;
-  margin-top: 26.5%;
+  margin-top: 20%;
 }
 
 .accordionRow {
@@ -282,6 +286,10 @@ span {
 }
 
 #stageCard {
+  display: block;
+}
+
+#stageCardLocations {
   display: block;
 }
 
@@ -476,6 +484,10 @@ img[alt="screenshot of webpage"] {
 #brBlock h4{
   color: white;
   margin-bottom: 25px;
+}
+
+#blBlock h4 {
+  color: white;
 }
 
 .me {

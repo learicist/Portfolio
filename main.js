@@ -164,9 +164,10 @@ $(document).ready(function() {
 			console.log($(this).text());
 			switch ($(this).text()) {
 				case "Instruments:":
-					$("#stageCard").addClass("hidden");
-					$("#recordingCard").addClass("hidden");
-					$("#writingCard").addClass("hidden");
+					$(".accordionCards").addClass("hidden");
+					// $("#stageCard").addClass("hidden");
+					// $("#recordingCard").addClass("hidden");
+					// $("#writingCard").addClass("hidden");
 					if ($("#instrumentCard").hasClass("hidden")) {
 						$("#instrumentCard").removeClass("hidden");
 					} else {
@@ -174,9 +175,10 @@ $(document).ready(function() {
 					}
 					break
 				case "Stage:":
-					$("#instrumentCard").addClass("hidden");
-					$("#recordingCard").addClass("hidden");
-					$("#writingCard").addClass("hidden");
+					$(".accordionCards").addClass("hidden");
+					// $("#instrumentCard").addClass("hidden");
+					// $("#recordingCard").addClass("hidden");
+					// $("#writingCard").addClass("hidden");
 					if ($("#stageCard").hasClass("hidden")) {
 						$("#stageCard").removeClass("hidden");
 					} else {
@@ -184,9 +186,10 @@ $(document).ready(function() {
 					}
 					break
 				case "Recording:":
-					$("#instrumentCard").addClass("hidden");
-					$("#stageCard").addClass("hidden");
-					$("#writingCard").addClass("hidden");
+					$(".accordionCards").addClass("hidden");
+					// $("#instrumentCard").addClass("hidden");
+					// $("#stageCard").addClass("hidden");
+					// $("#writingCard").addClass("hidden");
 					if ($("#recordingCard").hasClass("hidden")) {
 						$("#recordingCard").removeClass("hidden");
 					} else {
@@ -194,9 +197,10 @@ $(document).ready(function() {
 					}
 					break
 				case "Writing:":
-					$("#instrumentCard").addClass("hidden");
-					$("#stageCard").addClass("hidden");
-					$("#recordingCard").addClass("hidden");
+					$(".accordionCards").addClass("hidden");
+					// $("#instrumentCard").addClass("hidden");
+					// $("#stageCard").addClass("hidden");
+					// $("#recordingCard").addClass("hidden");
 					if ($("#writingCard").hasClass("hidden")) {
 						$("#writingCard").removeClass("hidden");
 					} else {
@@ -206,6 +210,24 @@ $(document).ready(function() {
 			}
 		}
 		
+	});
+
+	// Stage location reveals
+	$(".venueLink").on("click", function () {
+		switch ($(this).text()) {
+			case "Hudson Valley, NY":
+				$(".venueList").addClass("hidden");
+				$("#hudson").removeClass("hidden");
+				break
+			case "New York City":
+				$(".venueList").addClass("hidden");
+				$("#nyc").removeClass("hidden");
+				break
+			case "Binghamton, NY":
+				$(".venueList").addClass("hidden");
+				$("#bing").removeClass("hidden");
+				break
+		}
 	});
 
 	//Name at bottom of page
