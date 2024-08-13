@@ -38,26 +38,6 @@
   margin: 50px auto;
 }
 
-/* .choiceMadeUp {
-  animation-name: up;
-  animation-duration: 10s;
-}
-
-.choiceMadeDown {
-  animation-name: down;
-  animation-duration: 6s;
-}
-
-@keyframes up {
-  from {margin-bottom: 50px;}
-  to {margin-bottom: 450px;}
-}
-
-@keyframes down {
-  from {margin-top: 50px;}
-  to {margin-top: 450px;}
-} */
-
 #question {
   font-size: calc(12px + 3.5vw);
   text-shadow: 2px 2px 2px rgb(0, 0, 0 , 0.9);
@@ -73,17 +53,6 @@
 }
 
 /* MEDIA QUERIES */
-/* @media screen and (max-width:1400px) {
-  #About {
-    margin:0;
-  }
-  #Portfolio {
-    margin:0;
-  }
-  #Contact {
-    margin:0;
-  } 
-} */
 
 @media screen and (min-width: 1693px) {
   #eighthnote{
@@ -119,6 +88,12 @@
   }
 }
 
+@media (min-width: 767px) and (max-width: 1455px) {
+    #musicTop {
+        padding-bottom: 30px;
+    }
+}
+
 @media screen and (max-width:1150px) {
   #nav a span {
     font-size: calc(12px + 1.6vw);
@@ -148,7 +123,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .navLists {
     background-color: black;
     display: flex;
@@ -186,7 +161,7 @@
 }
 
 /* Scrollbar */
-/* width */
+/* Width */
 ::-webkit-scrollbar {
 	width: 10px;
 	height: 20px;
@@ -223,7 +198,6 @@
   /* display:; */
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -375,9 +349,17 @@
 }
 
 .aboutRow {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
+}
+
+.musicPage .topRows {
+  padding-bottom: 0px;
+}
+
+.codePage .topRows {
+    padding-bottom: 60px;
 }
 
 .faceDiv {
@@ -487,7 +469,7 @@ span {
 .instrumentText {
   display: flex;
   justify-content: center;
-  vertical-align: center;
+  vertical-align: middle;
   align-items: center;
   text-align: center;
 }
@@ -584,12 +566,12 @@ span {
 }
 
 .webshots {
-  /* border: 3px solid rgba(90, 112, 132, 0.45); 
-  border-radius: 5px; */
-  background-color: black;
-  padding-bottom: 25px;
-  display: flex;
-  justify-content: center;
+    /* border: 3px solid white;
+    border-radius: 5px; */
+    background-color: black;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .screenshots {
@@ -598,11 +580,17 @@ span {
   padding: 15px 0;
 }
 
+.devShots {
+/*    border: 2px dotted white;*/
+    display: inline-block;
+}
+
 img[alt="screenshot of webpage"] {
-  border: 2px solid white;
-  border-radius: 15px;
-  /* min-height: 100%; */
-  max-height: 45vh;
+    border: 2px solid white;
+    border-radius: 15px;
+    /* min-height: 100%; */
+    max-height: 45vh;
+    width: 100%;
 }
 
 .tubeBoxes {

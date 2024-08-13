@@ -186,6 +186,9 @@ $(document).ready(function() {
 					if ($("#instrumentCard").hasClass("hidden")) {
 						$(".accordionCards").hide();
 						$("#instrumentCard").show();
+						if (window.innerWidth < 770) {
+							scrollTo(0, 400);
+						}
 					} else {
 						$("#instrumentCard").hide();
 					}
@@ -194,6 +197,9 @@ $(document).ready(function() {
 					if ($("#stageCard").hasClass("hidden")) {
 						$(".accordionCards").hide();
 						$("#stageCard").show();
+						if (window.innerWidth < 770) {
+							scrollTo(0, 400);
+						}
 					} else {
 						$("#stageCard").hide();
 					}
@@ -202,6 +208,9 @@ $(document).ready(function() {
 					if ($("#recordingCard").hasClass("hidden")) {
 						$(".accordionCards").hide();
 						$("#recordingCard").show();
+						if (window.innerWidth < 770) {
+							scrollTo(0, 400);
+						}
 					} else {
 						$("#recordingCard").hide();
 					}
@@ -210,6 +219,9 @@ $(document).ready(function() {
 					if ($("#writingCard").hasClass("hidden")) {
 						$(".accordionCards").hide();
 						$("#writingCard").show();
+						if (window.innerWidth < 770) {
+							scrollTo(0, 400);
+						}
 					} else {
 						$("#writingCard").hide();
 					}
