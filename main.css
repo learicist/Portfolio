@@ -1,3 +1,13 @@
+/* COLORS:
+        rgb(76, 120, 158)
+        rgb(90, 112, 132)
+        #3374ad
+        #337ab7
+        #4c789e
+        #76a1c7 
+*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +20,7 @@
 /* HIDE PAGE UNTIL USER CHOICE */
 .hidden {
   display: none;
-  visibility: hidden;
 } 
-
 
 /* OPENING PAGE */
 #openingQuestion {
@@ -30,6 +38,26 @@
   margin: 50px auto;
 }
 
+/* .choiceMadeUp {
+  animation-name: up;
+  animation-duration: 10s;
+}
+
+.choiceMadeDown {
+  animation-name: down;
+  animation-duration: 6s;
+}
+
+@keyframes up {
+  from {margin-bottom: 50px;}
+  to {margin-bottom: 450px;}
+}
+
+@keyframes down {
+  from {margin-top: 50px;}
+  to {margin-top: 450px;}
+} */
+
 #question {
   font-size: calc(12px + 3.5vw);
   text-shadow: 2px 2px 2px rgb(0, 0, 0 , 0.9);
@@ -45,7 +73,7 @@
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width:1400px) {
+/* @media screen and (max-width:1400px) {
   #About {
     margin:0;
   }
@@ -54,21 +82,95 @@
   }
   #Contact {
     margin:0;
+  } 
+} */
+
+@media screen and (min-width: 1693px) {
+  #eighthnote{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 8%;  
+  }
+
+  #elementTags {
+    margin-bottom: 8%;
+  }
+
+  .dropdown {
+    margin-left: 15px;
+    background-color: white;
+    border-radius: 6%;
+    display:inline-block;
+    text-align: center;
+  }
+  
+  #nav a {
+    font-family: 'Lobster Two', serif;
+    font-size: calc(12px + 0.8vw);
+    color: #337ab7;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .links {
+    padding: 0.2vh 0.5vw;
+  }
+}
+
+@media screen and (max-width:1150px) {
+  #nav a span {
+    font-size: calc(12px + 1.6vw);
   }
 }
 
 @media screen and (max-width:1000px) {
   .myFace {
-    height:50%;
-    width:50%;
+    /* height:50%; */
+    width:30%;
   }
 
-  #myMusicFace {
-    display: none;
+  .webshots {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .screenshots {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formRow h4 {
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width: 767px) {
+  .navLists {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 10px 0px;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown {
+    margin: 5px 15px 5px 0px;
+    /* border: 1px solid red; */
+  }
+
+  #brBlock {
+    margin: 25px 0px 25px 0px;
+    padding-top: 0px;
+  }
 
   #accordionRowTriggers {    
     text-align: center;
@@ -77,12 +179,11 @@
   }
 
   .triggerDivs {
-    margin: 25px auto;
-    border: 1px solid red;
+    margin: 15px auto;
+    /* border: 1px solid red;  */
   }
 
 }
-
 
 /* Scrollbar */
 /* width */
@@ -119,7 +220,7 @@
   height: 50px;
   display: block;
   text-decoration: none;
-  display:;
+  /* display:; */
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -130,7 +231,7 @@
 #scrollUp i {
   margin:0;
   position:relative;
-  left:39%;
+  left:35%;
   top:13px;
   font-size:19px;
   -webkit-transition: all 0.3s linear;
@@ -150,59 +251,142 @@
   top:4px;
 }
 
-.dropdown {
-  margin-left: 5px;
-  background-color: black;
-  border-radius: 6%;
-  font-size: 1.8em;
-  margin-top:2%;
-  display:inline-block;
+/* ===================================  NAVBAR =============================== */
+
+.fixed-top {
+  height: 65px;
+  opacity: .952;
+  align-items: center;
+  vertical-align: middle;
 }
 
 #nav {
-  width: 65%;
+  width: 85%;
+  height: 100%;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .navbar-collapse {
-  float: right;
+  display: flex;
+  justify-content: right;
 }
 
-.navbar-inverse {
-  height: 60px;
-  opacity: .952;
+/* AFFECT STYLING OF BURGER MENU ICON */
+#codeBurger {
+  background-image: url(
+        "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(76, 120, 158)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+} 
+
+#musicBurger {
+  background-image: url(
+        "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(76, 120, 158)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+#musicBurger:hover, #musicBurger:focus {
+  background-image: url(
+        "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+  );  
+}
+
+#codeBurger:hover, #codeBurger:focus {
+  background-image: url(
+        "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"
+  );  
+}
+
+.dropdown {
+  margin-left: 15px;
+  background-color: white;
+  border-radius: 6%;
+  font-size: 1.8em;
+  /* margin-top:2%; */
+  display:inline-block;
+  text-align: center;
 }
 
 #nav a {
-  font-family: 'Lobster Two';
+  font-family: 'Lobster Two', serif;
+  font-size: calc(12px + 1.3vw);
   color: #337ab7;
+  text-decoration: none;
+  align-items: center;
+  height: 100%;
 }
 
-#eighthnote {
-  max-height: 55px;
-  margin-top: -22%;
+.links {
+  padding: 0.5vh 0.8vw;
+}
+
+.test {
+  vertical-align: middle;
+  align-items: center;
+}
+
+#eighthNoteBtn {
+  height: 100%;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#eighthnote{
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
 }
 
-.flatIcons {
-  width: 4.5%;
+#eighthnote:hover {
+  box-shadow: 0px 0px 3px 2px rgb(256, 256, 256, 0.9);
+}
+
+#htmlTags {
+  height: 100%;
+  padding: 0;
 }
 
 #elementTags {
-  max-height: 52px;
-  /* max-width: 60px; */
-  margin-top: -16%;
+  height: 100%;
+  /* max-width: 60px; 
+  margin-top: -16%;*/
+  border-radius: 5px;
+}
+
+#elementTags:hover {
+  box-shadow: 0px 0px 3px 2px rgb(256, 256, 256, 0.9);
 }
 
 #codeMenu {
   border: 0.5px solid white;
-  margin-top:12.5px;
+  /* margin-top:12.5px; */
   margin-right: 0;
 }
 
 #musicMenu {
   border: 0.5px solid white;
-  margin-top:12.5px;
+  /* margin-top:12.5px; */
   margin-right:0;
+}
+
+/* =========================================== PAGE CONTENTS ===================================== */
+
+
+.topRows {
+  padding-top: 80px;
+}
+
+.aboutRow {
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.faceDiv {
+  align-items: center;
+  padding-top: 50px;
+}
+
+.myFace {
+  width: 85%;
 }
 
 span {
@@ -212,31 +396,39 @@ span {
 .block1 {
   margin: 0 25%;
   background-color: #4c789e;
-  /* box-shadow:0px 0px 20px black; */
   color: white;
   font-family: 'Josefin Slab';
-  display: flex;
-  justify-content: center;
+  display: block;
+  /* justify-content: center; */
   text-align: center;
 }
 
-.fatbottomgirls {
-  margin-bottom: 5%;
+/* #musicPageTwo {
+  display: block;
+} */
+
+#codePageTwo .aboutMe {
+  margin-top: 50px;
 }
 
 #myCodeFace {
-  border-radius:50%;
-  margin: 12% auto 5% auto;
+  border-radius: 50%;
+  margin: 1% auto 10% auto;
 }
 
 #myMusicFace {
-  border-radius:50%;
-  margin: -35% auto 10% auto;
+  border-radius: 50%;
+  width: 70%;
+  margin: 18% auto 10% auto;
 }
 
 .about {
-  font-size: 2em;
-  margin-top: 20%;
+  font-size: 2.3em;
+  margin-top: 2.3%;
+}
+
+#musicAboutMe {
+  padding-top: 30px;
 }
 
 .accordionRow {
@@ -244,8 +436,11 @@ span {
   justify-content: center;
 }
 
-#accordionRowCards {
-  margin-top: 25px;
+#accordionRowTriggers {    
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .accordionCards {
@@ -254,15 +449,12 @@ span {
   color: rgb(0, 0, 0);
   font-size: calc(10px + 1.1vw);
   font-weight: 600;
-  padding-top: 10px;
+  padding-top: 10px; 
   box-shadow: 1px 2px 2px rgb(0, 0, 0, 0.6);
 }
 
-.accordions {
-  margin: auto;
+.stageAccordions {
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
 .accordionTriggers {
@@ -272,12 +464,32 @@ span {
   border-radius: 5px;
   padding: 2px 10px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.6);
-  margin: auto;
+  margin: 0px 5px;
+  
 }
 
 .accordionTriggers:hover {
   background-color: black;
   color: white;
+}
+
+/* #instrumentCard {
+  display: block;
+} */
+
+.flatIcons {
+  width: 4%;
+  height: 4%;
+  margin: 0px 5px 18px 5px;
+  /* border: 1px solid red; */
+}
+
+.instrumentText {
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  text-align: center;
 }
 
 .venueLink {
@@ -289,9 +501,9 @@ span {
   color: black;
 }
 
-#stageCard {
+/* #stageCard {
   display: block;
-}
+} */
 
 #stageCardLocations {
   display: block;
@@ -309,29 +521,37 @@ span {
   font-size: calc(10px + 0.5vw);
 }
 
-.myName {
-  color: white;
-  font-size: 1.2em;
-  font-family: serif;
-  border: transparent;
-  background-color: transparent;
+.fatBottomRow {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
 }
 
-/*SECTION 2*/
+/* .fatBottomGirls {
+  margin-bottom: 2%;
+} */
+
+
+/* ===================================== SECTION 2 ======================================== */
+
 .block2 {
-  height: 100%;
-  /* margin: 0 25% 35px 25%; */
+  /* height: 100%;
+  margin: 0 25% 35px 25%; */
   background-color: white;
   color: #4c789e;
 }
 
-#codePageThree {
+/* .codeBody {
+  margin-top: 50px;
+} */
+
+/* #codePageThree {
   padding-top: 60px;
 }
 
 #musicPageThree {
   padding-top: 60px;
-}
+} */
 
 #portRow {
   text-align: center;
@@ -368,6 +588,8 @@ span {
   border-radius: 5px; */
   background-color: black;
   padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .screenshots {
@@ -401,23 +623,121 @@ img[alt="screenshot of webpage"] {
   height: 100%;
 }
 
+.soundClouds {
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
 .contacts {
   text-align: center;
   padding-top: 50px;
 }
 
-/*SECTION 3*/
+/* =========================== SECTION 3 ==================================== */
 
-.block3 {
+/* Gallery Music Page */
+#musicPageFour {
+  background-color: rgb(76, 120, 158);
+}
+
+#gallRowTop {
+  /* margin-top: 50px; */
+  /* margin-bottom: -10px; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.gallRow {
+  margin: 30px auto;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.gallDivs {
+  display: block;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  /* border: 2px solid red; */
+}
+
+#gallDescription {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 8px 10px rgb(0, 0, 0 , 0.6);
+  margin-bottom: 25px;
+  padding-top: 15px;
+}
+
+#gallRow1 .gallDivs {
+  border-bottom: 2px dashed white;
+}
+
+#row2mid  {
+  border-right: 2px dashed white;
+  border-left: 2px dashed white;
+}
+
+#gallRow3 .gallDivs {
+  border-bottom: 2px dashed white;
+}
+
+#row4mid {
+  border-right: 2px dashed white;
+  border-left: 2px dashed white;
+}
+
+.gallTitles {
+  font-size: calc(10px + 1vw);
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.gallShots {
+  /* height: 100%; */
+  border: 3px solid white;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 0.8);
+}
+
+.gallLandscape {
+  width: 100%;
+}
+
+.gallPortrait {
+  width: 65%;
+}
+
+/* ========================SECTION 4================================ */
+
+/* #codePageFour {
+  margin-top: 150px;
+} */
+
+.formRow {
+  padding-top: 25px;
+}
+
+.formRow h4 {
+  padding: 0 35px;
+}
+
+.block4 {
   height:100%;
   background-color:#76a1c7;
   /* margin:0 25%; */
-  box-shadow:0px 2px 2px black;
+  box-shadow: 0px 2px 2px black;
 }
 
 .title {
-  font-size:2.4em;
-  opacity:.9;
+  font-size:2.8em;
+  opacity:.95;
   margin-bottom:-3px;
 }
 
@@ -434,8 +754,8 @@ img[alt="screenshot of webpage"] {
 }
 
 .inputs {
-  list-style:none;
-  font-size:26px;
+  list-style: none;
+  font-size: 26px;
 }
 
 ::placeholder {
@@ -471,27 +791,32 @@ img[alt="screenshot of webpage"] {
   border: 3px solid black;
 }
 
-/*Section 4*/
+/* =================================== SECTION 5 ================================== */
 
-.block4 {
-  height: 100%;
+.block5 {
+  /* height: 100%; */
   background-color:#3374ad;
   box-shadow:0px 0px 5px black;
   font-family:"Josefin Sans", sans-serif;
   margin-top: 25px;
+  padding: 25px 0px;
 }
 
-.block4-text {
+/* .block5-text {
   margin: 3% 25%;
+} */
+
+#blBlock h4 {
+  color: white;
+}
+
+#brBlock {
+  padding-top: 25px;
 }
 
 #brBlock h4{
   color: white;
   margin-bottom: 25px;
-}
-
-#blBlock h4 {
-  color: white;
 }
 
 .me {
@@ -502,6 +827,7 @@ img[alt="screenshot of webpage"] {
   padding: 5px;
   font-family: 'Lobster Two';
   margin: 0.9em 0.5em 0 0.5em;
+  text-decoration: none;
 }
 
 .me:hover, .me:focus {
@@ -510,21 +836,32 @@ img[alt="screenshot of webpage"] {
   /* color: #337ab7; */
 }
 
+.myName {
+  color: white;
+  font-size: 1.2em;
+  font-family: serif;
+  border: transparent;
+  background-color: transparent;
+}
+
 /*Footer*/
+
+.footRow {
+  display: flex;
+  justify-content: center;
+}
 
 .foot {
   width: 100%;
-  height: 8.5em;
+  /* height: 5em; */
   background-color: black;
-  width: 100%;
   /* box-shadow:0px 10px 15px black; */
-
 }
 
 #copyright {
-  font-size: 1.4em;
+  /* font-size: 1.6em; */
   text-align: center;
-  margin-top: 2.5em;
+  margin: 0.8em auto;
   color: white;
   font-family: "Josefin Sans", sans-serif;
 }

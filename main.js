@@ -1,4 +1,22 @@
 $(document).ready(function() {
+
+	$(window).scroll(function() {
+		// If page is scrolled more than 50px
+		if ($(this).scrollTop() >= 50) {   
+			// Fade in the arrow
+			$('#scrollUp').fadeIn(200);    
+		} else {
+			$('#scrollUp').fadeOut(200);  
+		}
+	}); 
+
+	// When arrow is clicked
+	$('#scrollUp').click(function() {      
+		$('body, html').animate({
+				// Scroll to top of body
+			scrollTop : 0                      
+		}, 500);
+	}); 
 	
 	$(".openingChoice").on({
 		mouseenter: function () {
@@ -10,8 +28,8 @@ $(document).ready(function() {
 		click: function () {
 			if (this.id == "chooseCoding") {
 				//Prompts and choices slide away from each other
-				$("#questionDiv").animate({bottom: "450px"}, 2500);
-				$("#choiceDiv").animate({top: "450px"}, 2500);
+				$("#questionRow").animate({marginTop: "-450px"}, 3000);
+				$("#choiceRow").animate({marginTop: "1050px"}, 3000);
 
 				//Landing page fades away, switches flip on visibility
 				$("html").fadeOut(2000, "linear", function () {
@@ -27,8 +45,8 @@ $(document).ready(function() {
 			//If user chooses Musician
 			} else if (this.id == "chooseMusic") {
 				//Prompts and choices slide away from each other
-				$("#questionDiv").animate({bottom: "450px"}, 2500);
-				$("#choiceDiv").animate({top: "450px"}, 2500);
+				$("#questionRow").animate({marginTop: "-450px"}, 3000);
+				$("#choiceRow").animate({marginTop: "1050px"}, 3000);
 
 				//Landing page fades away, switches flip on visibility
 				$("html").fadeOut(2000, "linear", function () {
@@ -56,19 +74,12 @@ $(document).ready(function() {
 			//console.log("I was clicked bitch");
 			//If Coding Page is on screen
 			if (this.id == "eighthNoteBtn") {
-
 				//Fade out page user is leaving, flip switches
 				$("html").fadeOut(1000, "linear", function() {
 					$(".codePage").addClass("hidden");
-					//$("#musicPageOne, #musicPageTwo, #musicPageFour, #musicPageFive").removeClass("hidden");
 					window.location = "music.html";
 				});
 
-				//Navbar fades in earlier
-				//$("#musicPageOne").fadeIn(800, "linear");
-
-				//Chosen page fades in
-				//$("#musicPageTwo, #musicPageFive").fadeIn(2000, "linear");
 				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-guitar.ico");
 
 			} else if (this.id == "htmlTags") {
@@ -76,15 +87,9 @@ $(document).ready(function() {
 				//Fade out page user is leaving, flip switches
 				$("html").fadeOut(1000, "linear", function() {
 					$(".musicPage").addClass("hidden");
-					//$("#codePageOne, #codePageTwo, #codePageFour, #codePageFive").removeClass("hidden");
 					window.location = "webDev.html";
 				});
 
-				//Navbar fades in earlier
-				//$("#codePageOne").fadeIn(800, "linear");
-
-				//Chosen page fades in
-				//$("#codePageTwo, #codePageFive").fadeIn(2000, "linear");
 				$("#favicon").attr("href", "https://res.cloudinary.com/learicist/image/upload/v1678062766/Portfolio/favicon-code.ico");
 			}
 		}
@@ -93,10 +98,12 @@ $(document).ready(function() {
 	//Hover on Nav options
 	$(".dropdown").on({
 		mouseenter: function() {
-			$(this).css("background-color", "white");
+			$(this).css("background-color", "#337ab7");
+			$("span", this).css("color", "white");
 		},
 		mouseleave: function() {
-			$(this).css("background-color", "black");
+			$(this).css("background-color", "white");
+			$("span", this).css("color", "#337ab7");
 		}
 	});
 
@@ -109,21 +116,24 @@ $(document).ready(function() {
 			switch ($(this).attr("id")) {
 				//...is About
 				case "codeAboutBtn":
-					$("#codePageTwo").removeClass("hidden");
-					$("#codePageThree, #codePageFour").addClass("hidden");
+					$(".codeBody").hide();
+					$("#codePageTwo").show();
 					$("#codeMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 				//...is Portfolio
 				case "codePortBtn":
-					$("#codePageThree").removeClass("hidden");
-					$("#codePageTwo, #codePageFour").addClass("hidden");
+					$(".codeBody").hide();
+					$("#codePageThree").show();
 					$("#codeMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 				//...is Contact
 				case "codeContactBtn":
-					$("#codePageFour").removeClass("hidden");
-					$("#codePageTwo, #codePageThree").addClass("hidden");
+					$(".codeBody").hide();
+					$("#codePageFour").show();
 					$("#codeMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 			}
 		}
@@ -137,22 +147,31 @@ $(document).ready(function() {
 			switch ($(this).attr("id")) {
 				//...is About
 				case "musicAboutBtn":
-					console.log("music link clicked, codepage has hidden, about btn clicked");
-					$("#musicPageTwo").removeClass("hidden");
-					$("#musicPageThree, #musicPageFour").addClass("hidden");
+					$(".musicBody").hide();
+					$("#musicPageTwo").show();
 					$("#musicMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 				//...is Portfolio
 				case "musicPortBtn":
-					$("#musicPageThree").removeClass("hidden");
-					$("#musicPageTwo, #musicPageFour").addClass("hidden");
+					$(".musicBody").hide();
+					$("#musicPageThree").show();
 					$("#musicMenu").trigger("click");
+					$("#scrollUp").trigger("click");
+					break
+				//...is Gallery
+				case "musicGalleryBtn":
+					$(".musicBody").hide();
+					$("#musicPageFour").show();
+					$("#musicMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 				//...is Contact
 				case "musicContactBtn":
-					$("#musicPageFour").removeClass("hidden");
-					$("#musicPageTwo, #musicPageThree").addClass("hidden");
+					$(".musicBody").hide();
+					$("#musicPageFive").show();
 					$("#musicMenu").trigger("click");
+					$("#scrollUp").trigger("click");
 					break
 			}
 		}
@@ -161,71 +180,58 @@ $(document).ready(function() {
 	//Music page release of info
 	$(".accordionTriggers").on({
 		click: function() {
-			console.log($(this).text());
+			//console.log($(this).text());
 			switch ($(this).text()) {
 				case "Instruments:":
-					// $("#stageCard").addClass("hidden");
-					// $("#recordingCard").addClass("hidden");
-					// $("#writingCard").addClass("hidden");
 					if ($("#instrumentCard").hasClass("hidden")) {
-						$(".accordionCards").addClass("hidden");
-						$("#instrumentCard").removeClass("hidden");
+						$(".accordionCards").hide();
+						$("#instrumentCard").show();
 					} else {
-						$("#instrumentCard").addClass("hidden");
+						$("#instrumentCard").hide();
 					}
 					break
-				case "Stage:":
-					// $("#instrumentCard").addClass("hidden");
-					// $("#recordingCard").addClass("hidden");
-					// $("#writingCard").addClass("hidden");
+				case "On Stage:":
 					if ($("#stageCard").hasClass("hidden")) {
-						$(".accordionCards").addClass("hidden");
-						$("#stageCard").removeClass("hidden");
+						$(".accordionCards").hide();
+						$("#stageCard").show();
 					} else {
-						$("#stageCard").addClass("hidden");
+						$("#stageCard").hide();
 					}
 					break
 				case "Recording:":
-					// $("#instrumentCard").addClass("hidden");
-					// $("#stageCard").addClass("hidden");
-					// $("#writingCard").addClass("hidden");
 					if ($("#recordingCard").hasClass("hidden")) {
-						$(".accordionCards").addClass("hidden");
-						$("#recordingCard").removeClass("hidden");
+						$(".accordionCards").hide();
+						$("#recordingCard").show();
 					} else {
-						$("#recordingCard").addClass("hidden");
+						$("#recordingCard").hide();
 					}
 					break
 				case "Writing:":
-					// $("#instrumentCard").addClass("hidden");
-					// $("#stageCard").addClass("hidden");
-					// $("#recordingCard").addClass("hidden");
 					if ($("#writingCard").hasClass("hidden")) {
-						$(".accordionCards").addClass("hidden");
-						$("#writingCard").removeClass("hidden");
+						$(".accordionCards").hide();
+						$("#writingCard").show();
 					} else {
-						$("#writingCard").addClass("hidden");
+						$("#writingCard").hide();
 					}
 					break
 			}
 		}
-		
 	});
 
 	// Stage location reveals
 	$(".venueLink").on("click", function () {
 		switch ($(this).text()) {
 			case "Hudson Valley, NY":
-				$(".venueList").addClass("hidden");
-				$("#hudson").removeClass("hidden");
+				$(".venueList").hide();
+				$("#hudson").show();
 				break
 			case "New York City":
-				$(".venueList").addClass("hidden");
-				$("#nyc").removeClass("hidden");
+				$(".venueList").hide();
+				$("#nyc").show();
 				break
 			case "Binghamton, NY":
-				$(".venueList").addClass("hidden");
-				$("#bing").removeClass("hidden");
+				$(".venueList").hide();
+				$("#bing").show();
 				break
 		}
 	});
@@ -259,41 +265,22 @@ $(document).ready(function() {
 	});
 
 	//Snap hamburger back in (mostly for mobile users)
-	$(".codeBody").on("click", function () {
-		if ($("#codeMenu").attr("aria-expanded") === "true") {
-			console.log('test');
+	$(".codePage").on("click", function () {
+		if ($("#codeMenu").attr("aria-expanded") === "true")  {
+			//console.log('test');
 			$("#codeMenu").trigger("click");
 		}
 	});
 
 	//Same as above
-	$(".musicBody").on("click", function () {
+	$(".musicPage").on("click", function () {
 		if ($("#musicMenu").attr("aria-expanded") === "true") {
-			console.log('test');
+			//console.log('test');
 			$("#musicMenu").trigger("click");
 		}
 	});
 
 
-	$(window).scroll(function() {
-		// If page is scrolled more than 50px
-		if ($(this).scrollTop() >= 50) {   
-			// Fade in the arrow
-			$('#scrollUp').fadeIn(200);    
-		} else {
-			$('#scrollUp').fadeOut(200);  
-		}
-	}); 
-
-	// When arrow is clicked
-	$('#scrollUp').click(function() {      
-		$('body, html').animate({
-			 // Scroll to top of body
-			scrollTop : 0                      
-		}, 500);
-	}); 
-
-	// ADD myMusicFace AFTER fatbottomgirls WHEN WIDTH IS BELOW X
-
+	scrollUp();
 
 });

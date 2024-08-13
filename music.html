@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Portfolio for learicist</title>
+		<title>Portfolio for Learicist</title>
 		<link rel="stylesheet" href="main.css" type="text/css">
+		<!-- Bootstrap CSS -->
+		<link 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+			rel="stylesheet" 
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+			crossorigin="anonymous">
 		<!-- FAVICON TO START -->
         <link 
 			rel="shortcut icon" 
@@ -17,128 +23,142 @@
 		      crossorigin="anonymous"/>
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:500" rel="stylesheet">
+		<!-- LightBox2 -->
+		<link 
+		rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" 
+		integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" 
+		crossorigin="anonymous" 
+		referrerpolicy="no-referrer" />
 		<!--Meta-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
-		<!--Bootstrap & jQuery-->
-		<script
-			src="https://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous">
-		</script>
-		<link
-			rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-			integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-			crossorigin="anonymous">
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-			crossorigin="anonymous">
-		</script>
-		<!-- FontAwesome -->
-		<script src="https://kit.fontawesome.com/ca9c8dc6ce.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
         <!-- NAVBAR -->
-		<div class="text-center musicPage " id="musicPageOne">
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div id="nav" class="container">
-					<div class="navbar-header">
-						<button id="musicMenu" class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#musicHamburger" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<!-- CHANGE HREF TO LOAD CODE PAGE VIA JS -->
-						<a class="navbar-brand" id="htmlTags" href="#">
-							<!-- &lt;/&gt; -->
-							<!-- FIND IMAGE OF HTML TAGS -->
-							<img
-								id="elementTags"
-								alt="coding tags"
-								src="https://res.cloudinary.com/learicist/image/upload/v1677130507/Portfolio/htmlTags.png" 
-							/>
-						</a>
-					</div>
-					<div id="musicHamburger" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a class="musicLinks links" id="musicAboutBtn" href="#">
-									<span>About</span>
-								</a>
-							</li>
-							<li class="dropdown">
-								<a class="musicLinks links" id="musicPortBtn" href="#">
-									<span>Portfolio</span>
-								</a>
-							</li>
-							<li class="dropdown">
-								<a class="musicLinks links" id="musicContactBtn" href="#">
-									<span>Contact</span>
-								</a>
-							</li>
-						</ul>
-					</div>
+		<!-- <div class="text-center musicPage" id="musicPageOne"> -->
+		<nav class="navbar navbar-expand-md bg-dark navbar-inverse fixed-top" data-bs-theme="dark">
+			<div id="nav" class="container-fluid">
+				<!-- <div class="navbar-header"> -->
+					<a class="navbar-brand" id="htmlTags" href="#">
+						<!-- &lt;/&gt; -->
+						<!-- FIND IMAGE OF HTML TAGS -->
+						<img
+							id="elementTags"
+							alt="coding tags"
+							src="https://res.cloudinary.com/learicist/image/upload/v1677130507/Portfolio/htmlTags.png" 
+						/>
+					</a>
+					<button 
+						id="musicMenu" 
+						class="navbar-toggler collapsed" 
+						type="button" 
+						data-bs-toggle="collapse" 
+						data-bs-target="#musicHamburger" 
+						aria-expanded="false" 
+						aria-controls="navbar">
+							<span class="navbar-toggler-icon burgers" id="musicBurger"></span>
+					</button>
+					
+				<!-- </div> -->
+				<div id="musicHamburger" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navLists">
+						<li class="dropdown">
+							<a class="musicLinks links" id="musicAboutBtn" href="#">
+								<span>About</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a class="musicLinks links" id="musicPortBtn" href="#">
+								<span>Portfolio</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a class="musicLinks links" id="musicGalleryBtn" href="#">
+								<span>Gallery</span>
+							</a>
+						</li>
+						<li class="dropdown">
+							<a class="musicLinks links" id="musicContactBtn" href="#">
+								<span>Contact</span>
+							</a>
+						</li>
+					</ul>
 				</div>
-			</nav>
-		</div>
+				<!-- Music Hamburger -->
+			</div>
+			<!-- container -->
+		</nav>
+		<!-- </div> -->
 		<!--end of Page1-->
 
-		<div id="musicPageTwo" class="container-fluid musicPage block1  musicBody">
-			<div class="row">
-				<div class="col-md-8 musicAboutMe">
-					<p class="about">Musician and Vocalist with 20 years experience playing, performing, recording, and writing. 
-						<br>
-						<br>
-					</p>
-				</div>
-				<div class="col-md-8">
-					<div class="row accordionRow" id="accordionRowTriggers">
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Instruments:</button> 
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Stage:</button>
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Recording:</button> 
-							</div>
-							
-							<div class="col-md-2 accordions triggerDivs">
-								<button class="accordionTriggers">Writing:</button> 
-							</div>
+		<div id="musicPageTwo" class="container-fluid musicPage block1 musicBody hidden">
+			<div class="row topRows">
+				<div class="col-md-8 aboutMe" id="musicAboutMe">
+					<p class="about">Musician and Vocalist with 20 years experience playing, performing, recording, and writing. </p>
+
+					<br>
+					
+					<div class="row" id="accordionRowTriggers">
+						<div class="col-md-3 accordions triggerDivs">
+							<button class="accordionTriggers">Instruments:</button> 
+						</div>
+						
+						<div class="col-md-3 accordions triggerDivs">
+							<button class="accordionTriggers">On Stage:</button>
+						</div>
+						
+						<div class="col-md-3 accordions triggerDivs">
+							<button class="accordionTriggers">Recording:</button> 
+						</div>
+						
+						<div class="col-md-3 accordions triggerDivs">
+							<button class="accordionTriggers">Writing:</button> 
+						</div>
 					</div>
 
+					<br>
+					<br>
+
 					<div class="row accordionRow" id="accordionRowCards">
-						<div class="col-md-8 accordions accordionCards hidden" id="instrumentCard">
-							<p>
-								<i class="fa-solid fa-microphone-lines"></i>
-								Lead Vocals, Backing Vocals, & Harmonies. 
-								<i class="fa-solid fa-microphone-lines"></i>
-								<br>
-								<i class="fa-solid fa-guitar"></i>
-								Acoustic, Electric, Slide, Lap Steel, & Bass Guitars.
-								<i class="fa-solid fa-guitar"></i>
-								<br>
-								<i class="fa-solid fa-drum"></i>
-								Drums & Percussion.
-								<i class="fa-solid fa-drum"></i>
-								<br>
+						<div class="col-md-10 accordions accordionCards hidden" id="instrumentCard">
+							<div class="instrumentText">
+								<p>
+									<i class="fa-solid fa-microphone-lines"></i>
+									Lead Vocals, Backing Vocals, & Harmonies
+									<i class="fa-solid fa-microphone-lines"></i>
+								</p>
+							</div>
+		
+							<div class="instrumentText">
+								<p>
+									<i class="fa-solid fa-guitar"></i>
+									Acoustic, Electric, Slide, Lap Steel, & Bass Guitars
+									<i class="fa-solid fa-guitar"></i>
+								</p>
+							</div>
+		
+							<div class="instrumentText">
+								<p>
+									<i class="fa-solid fa-drum"></i>
+									Drums & Percussion
+									<i class="fa-solid fa-drum"></i>
+								</p>
+							</div>
+		
+							<div class="instrumentText">
 								<img class="flatIcons" src="https://res.cloudinary.com/learicist/image/upload/v1720052085/Portfolio/piano.png" />
-								Piano, Keyboard, Synthesizer, & Organ.
+								<p>Piano, Keyboard, Synthesizer, & Organ</p>
 								<img class="flatIcons" src="https://res.cloudinary.com/learicist/image/upload/v1720052085/Portfolio/piano.png" />
-							</p>
+							</div>
 						</div>
-						<div class="col-md-8 accordions accordionCards hidden" id="stageCard">
+		
+						<div class="col-md-10 accordions accordionCards hidden" id="stageCard">
 							<p>250+ shows in band and solo settings.</p>
 							<i class="fa-solid fa-music fa-xl"></i>
 							<br>
-							<div class="accordions" id="stageCardLocations">
+							<div class="stageAccordions" id="stageCardLocations">
 								<button type="button" class="venueLink">Hudson Valley, NY</button> 
 								<button type="button" class="venueLink">New York City</button> 
 								<button type="button" class="venueLink">Binghamton, NY</button>
@@ -148,7 +168,8 @@
 								<p class="venueList hidden" id="bing">Spring Fling on SUNY Campus, Event Center on SUNY Campus, Thirsty's, On the Roxx, Peacemaker's Stage</p>
 							</div>						
 						</div>
-						<div class="col-md-8 accordions accordionCards hidden" id="recordingCard">
+		
+						<div class="col-md-10 accordions accordionCards hidden" id="recordingCard">
 							<p>Capturing, Editing, Mixing, FX, Mastering, & Rendering. 
 								<br>
 								<i class="fa-solid fa-microphone-lines"></i>
@@ -160,36 +181,46 @@
 								50+ self-produced recordings.
 							</p>
 						</div>
-						<div class="col-md-8 accordions accordionCards hidden" id="writingCard">
-							<p>Chord progressions, melodies, harmonies, percussion. 
+		
+						<div class="col-md-10 accordions accordionCards hidden" id="writingCard">
+							<p>Commissioned Bespoke original compositions. 
 								<br><i class="fa-solid fa-pencil fa-lg"></i>
-								<br>Both personal and professional settings. 
-								<br><i class="fa-solid fa-square-pen fa-lg"></i>
-								<br>Both band and solo environments.
+								<br>Chord progressions, melodies, harmonies, percussion.
 								<br><i class="fa-solid fa-feather-pointed fa-lg"></i>
-								<br>Commissioned Bespoke original compositions.
+								<br>Personal & professional settings.  Band & solo environments.
 							</p>
 						</div>
 					</div>
+				</div>
 
+				<div class="col-md-4">
+					<img 
+						class="img-responsive myFace" 
+						id="myMusicFace" 
+						alt="myself playing music live"
+						src="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240721_145417.jpg" />
+				</div>
+			</div>
+			
+			<div class="row aboutRow">
+				<div class="col-md-10">
 					<h2 style="color: black;">
 						<strong>//\\//\\</strong>
 					</h2>
-					<h3 class="fatbottomgirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
-				</div>
-				<div class="col-md-4">
-					<img class="img-responsive myFace" id="myMusicFace" src="https://res.cloudinary.com/learicist/image/upload/v1513471759/Portfolio/lucious_and_i_fkvn9d.jpg" alt="myself and my cat" />
+					<!-- <br> -->
+					<h3 class="fatBottomGirls">Bespoke Compositions - Recording - Live Performance - Content Creation</h3>
 				</div>
 			</div>
 		</div>
 		<!--End of Page 2-->
-		
+
+
 		<div id="musicPageThree" class="container-fluid block2 musicPage musicBody hidden">
-			<div id="portRow" class="row">
+			<div id="portRow" class="row topRows">
 				<div id="portBox" class="col-md-6">
 					<h1 class="port" style="font-size: 3.2em;">Portfolio</h1>
 					<h3 class="port" style="margin-bottom: 2%; color: black;"><strong>//\\//\\</strong></h3>
-					<h4 class="port">Click each one to explore further</h4>
+					<h3 class="port">Click each one to explore further</h3>
 				</div>
 			</div>
 			<!--portRow-->
@@ -274,41 +305,223 @@
 						</iframe>
 					</div>
 				</div>
-				
 			</div>
 
-			<!-- <div class="row webshots">
-				<div class="col-md-6 screenshots">
-					<h4 class="titles">Commission Song for Client</h4>
-					<br>
-					<p class="titles descriptors">Custom Original Birthday song for client's loved one based off info provided. 
-						<br>
-						Everything you hear is me.
-					</p>
-					<div class="tubeBoxes">
-						<iframe  
-							class="youtubes"
-							src="https://www.youtube.com/embed/QJ-v1gt63nI" 
-							title="YouTube video player" 
-							frameborder="1" 
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-							allowfullscreen>
-						</iframe>
-					</div>
-				</div> 
-			</div> -->
-			<!--webshots-->
-		</div>
-		<!--end of page 3-->
+			<div class="row webshots">
+				<div class="col-md-4 screenshots">
+					<h4 class="titles">Bob Marley with some guests on vocals</h4>
+					<iframe width="70%"		class="soundClouds"
+						height="350"		scrolling="no" 		
+						frameborder="no" 	allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172332339&color=%23717171&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
+				<div class="col-md-4 screenshots">
+					<h4 class="titles">The Beatles with some guests on vocals</h4>
+					<iframe width="70%"         class="soundClouds"
+						height="350" 			scrolling="no" 
+						frameborder="no" 		allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/166003406&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
 
-		<div id="musicPageFour" class="container-fluid block3 hidden musicPage musicBody contacts">
-			<div class="row">
+				<div class="col-md-4 screenshots">
+					<h4 class="titles">Billy Joel with guests on vocals and Trumpet</h4>
+					<iframe width="70%"         class="soundClouds"
+						height="350" 			scrolling="no" 
+						frameborder="no" 		allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/36545585&color=%23717171&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
+			</div>
+
+			<div class="row webshots">
+				<div class="col-md-5 screenshots">
+					<h4 class="titles">An original song based on a real experience</h4>
+					<iframe 
+						width="60%" 		class="soundClouds"
+						height="350" 		scrolling="no" 
+						frameborder="no" 	allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/33330521&color=%23717171&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
+				<div class="col-md-5 screenshots">
+					<h4 class="titles">An original song written during a hard time</h4>
+					<iframe 
+						width="60%" 		class="soundClouds"
+						height="350" 		scrolling="no" 
+						frameborder="no" 	allow="autoplay" 
+						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174317909&color=%23717171&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+					</iframe>
+				</div>
+			</div>
+
+			<div class="row webshots">
+				<div class="col-md-8 screenshots">
+					<h3 class="titles">Stay tuned, this page will continue to be updated as I play produce more recordings! </h3>
+				</div>
+			</div>
+		</div>
+		<!--End of Page 3-->
+		
+		<div id="musicPageFour" class="container-fluid block3 musicPage musicBody hidden">
+			<div class="row topRows" id="gallRowTop">
+				<div class="col-md-6" id="gallDescription">
+					<h1>Hello!</h1>
+					<!-- <br> -->
+					<h3>Here are some still shots to peruse</h3>
+				</div>
+			</div>
+
+			<!-- Adjust for mobile responsiveness. Hold down triggers Magnify as if clicked -->
+			<!-- Add Audio Only option for Portfolio page, embed Soundcloud and other work -->
+			<div class="row gallRow" id="gallRow1">
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Twin Star Orchards - 7.19.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_171105.jpg" data-lightbox="wideSoloImg">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_171105.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_171105.jpg"
+							alt="On stage with river behind"
+							title="Click to Enlarge"
+							class="gallShots gallSolo gallLandscape zoom"
+							id="wideSolo" />
+					</a>
+				</div>
+				<div class="col-md-2">
+
+				</div>
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at Twin Star - 7.19.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_182826.jpg" data-lightbox="closeUpSoloImg">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_182826.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721678008/Portfolio/20240719_182826.jpg"
+							alt="Zoomed in solo"
+							title="Click to Enlarge"
+							class="gallShots gallSolo gallPortrait zoom"
+							id="closeUpSolo" />
+					</a>
+					
+				</div>
+			</div>
+
+			<div class="row gallRow" id="gallRow2">
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721755133/Portfolio/IMG_2230.jpg" data-lightbox="bandLive1Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721755133/Portfolio/IMG_2230.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721755133/Portfolio/IMG_2230.jpg"
+							data-magnify-magnifiedwidth="30%"
+							alt="Cawampus Live at the Rhinecellar"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallLandscape zoom"
+							id="bandLive1" />
+					</a>
+				</div>
+				<div class="col-md-4 gallDivs" id="row2mid">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240720_205843.jpg" data-lightbox="bandLive1Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240720_205843.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240720_205843.jpg"
+							alt="Catawampus Live at the Rhinecellar"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallPortrait zoom"
+							id="bandLive2" />
+					</a>
+				</div>
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721755132/Portfolio/IMG_2229.jpg" data-lightbox="bandLive1Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721755132/Portfolio/IMG_2229.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721755132/Portfolio/IMG_2229.jpg"
+							alt="Catawampus Live at the Rhinecellar"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallLandscape zoom"
+							id="bandLive3" />
+					</a>
+				</div>
+			</div>
+
+			<div class="row gallRow" id="gallRow3">
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at Vosburgh Brewing Co. - 7.21.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240721_145417.jpg" data-lightbox="faceSoloImg">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240721_145417.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721678604/Portfolio/20240721_145417.jpg"
+							alt="Just face solo"
+							title="Click to Enlarge"
+							class="gallShots gallSolo gallPortrait zoom"
+							id="faceSolo" />
+					</a>
+				</div>
+				<div class="col-md-2">
+
+				</div>
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1721678599/Portfolio/20240720_201433.jpg" data-lightbox="bandSoloImg">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1721678599/Portfolio/20240720_201433.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1721678599/Portfolio/20240720_201433.jpg"
+							alt="Zoomed in during band show"
+							title="Click to Enlarge"
+							class="gallShots gallSolo gallPortrait zoom"
+							id="bandSolo" />
+					</a>
+				</div>
+			</div>
+
+			<div class="row gallRow" id="gallRow4">
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at Hopewell Inn - 5.4.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1722031778/Portfolio/418D5473-3AA4-47B2-A125-35558F5B7C35_4_5005_c.jpg" data-lightbox="bandLive2Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1722031778/Portfolio/418D5473-3AA4-47B2-A125-35558F5B7C35_4_5005_c.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1722031778/Portfolio/418D5473-3AA4-47B2-A125-35558F5B7C35_4_5005_c.jpg"
+							alt="Outside Hopewell Inn"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallLandscape zoom"
+							id="hopewellBand" />
+					</a>
+				</div>
+				<div class="col-md-4 gallDivs" id="row4mid">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1722030436/Portfolio/IMG_6345.jpg" data-lightbox="bandLive2Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1722030436/Portfolio/IMG_6345.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1722030436/Portfolio/IMG_6345.jpg"
+							alt="Discussion on stage"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallPortrait zoom"
+							id="bandLive4" />
+					</a>
+				</div>
+				<div class="col-md-4 gallDivs">
+					<h5 class="gallTitles">Live at RhineCellar Lounge - 7.20.24</h5>
+					<a href="https://res.cloudinary.com/learicist/image/upload/v1722030437/Portfolio/IMG_6355.jpg" data-lightbox="bandLive2Img">
+						<img src="https://res.cloudinary.com/learicist/image/upload/v1722030437/Portfolio/IMG_6355.jpg"
+							data-magnify-src="https://res.cloudinary.com/learicist/image/upload/v1722030437/Portfolio/IMG_6355.jpg"
+							alt="Full Band Shot"
+							title="Click to Enlarge"
+							class="gallShots gallBands gallLandscape zoom"
+							id="bandLive5" />
+					</a>
+				</div>
+			</div>
+
+			<div class="row gallRow" id="gallRow5">
+				<div class="col-md-8 gallDivs">
+					<h3 class="gallTitles">Stay tuned, this page will continue to be updated as I play more shows! </h3>
+				</div>
+			</div>
+		</div>
+		<!--end of page 4-->
+
+		<div id="musicPageFive" class="container-fluid block4 hidden musicPage musicBody contacts">
+			<div class="row topRows">
 				<div class="col-md-12">
 					<h2 class="title">Contact Me</h2>
+					<br>
 					<h3 class=""><strong>//\\//\\</strong></h3>
 				</div>
 			</div>
-			<div style="margin-bottom:10px" class="row">
+			<div style="margin-bottom:10px" class="row formRow">
 				<ul id="musicInputs" class="col-md-6 inputs">
 					<form action="https://formspree.io/f/moqzenqo" method="POST">
 						<li>
@@ -326,23 +539,27 @@
 						<button class="send" name="sendBtn" type="submit">Send</button>
 					</form>
 				</ul>
-				<h4 style="margin-top:5%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding commissioned songs, my projects and experience, or just to talk some Philosophy with me. 
+				<h4 style="margin-top:2%; font-size:2em" class="col-md-6">You rang? Please feel free to reach out to me; for information regarding commissioned songs, my projects and experience, or just to talk some Philosophy with me. 
 					<br><br>
-					I would be happy to hear from you and address any questions or curiosities you may have. L<span style="color:orange">e</span>t'<span style="color:orange">s</span> g<span style="color:orange">o</span> M<span style="color:orange">e</span>t<span style="color:orange">s</span>!
+					I would be happy to hear from you and address any questions or curiosities you may have. 
+					<br> 
+					L<span style="color:orange">e</span>t'<span style="color:orange">s</span> 
+						g<span style="color:orange">o</span> 
+						M<span style="color:orange">e</span>t<span style="color:orange">s</span>!
 				</h4>
 			</div>
 		</div>
-		<!-- End of Page 4 -->
+		<!-- End of Page 5 -->
 
-		<div id="musicPageFive" class="container-fluid block4 musicPage musicBody ">
-			<div class="container-fluid block4-text">
+		<div id="musicPageSix" class="container-fluid block5 musicPage ">
+			<!-- <div class="container-fluid block5-text"> -->
 				<div class="row">
 					<div class="col-md-6" id="blBlock">
 						<h4 style="margin-top:1.2em" class="text-center bottomLeft">ABOUT THIS PAGE</h4>
 						<p class="text-center bottomLeft" style="font-size: 1.25em;">Made while listening exclusively to "The Impossible Kid"
 							<br>
 							& "We Got it from Here, Thank You for Your Service"
-							<br></br>
+							<br>
 							by
 							<a 
 								class="myName" 
@@ -367,7 +584,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			<!-- </div> -->
 		</div>
 
 
@@ -375,14 +592,36 @@
 			<i class="fas fa-angle-up"></i>
 		</a>
 
+		<!--Bootstrap & jQuery-->
+		<script 
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+			crossorigin="anonymous">
+		</script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous">
+		</script>
+		<!-- FontAwesome -->
+		<script src="https://kit.fontawesome.com/ca9c8dc6ce.js" crossorigin="anonymous"></script>
+		<!-- LightBox2 -->
+		<script 
+			src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" 
+			integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ==" 
+			crossorigin="anonymous" 
+			referrerpolicy="no-referrer">
+		</script>
 		<script src="main.js"></script>
 	</body>
 
 	<footer>
-		<div class="container-fluid codeBody musicBody foot">
-			<div>
-				<h5 id="copyright">Learicist &copy;2018-2024</h5>
-				<!-- All Rights Reserved -->
+		<div class="container-fluid foot">
+			<div class="row footRow">
+				<div class="col-md-6">
+					<h3 id="copyright">Learicist &copy;2018-2024</h3>
+					<!-- All Rights Reserved -->
+				</div>
 			</div>
 		</div>
 	</footer>
