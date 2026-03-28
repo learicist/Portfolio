@@ -184,6 +184,7 @@ $(document).ready(function() {
 			switch ($(this).text()) {
 				case "Instruments:":
 					if ($("#instrumentCard").hasClass("hidden")) {
+						$("#musicLogo").addClass("hidden");
 						$(".accordionCards").hide();
 						$("#instrumentCard").show();
 						if (window.innerWidth < 770) {
@@ -195,6 +196,7 @@ $(document).ready(function() {
 					break
 				case "On Stage:":
 					if ($("#stageCard").hasClass("hidden")) {
+						$("#musicLogo").addClass("hidden");
 						$(".accordionCards").hide();
 						$("#stageCard").show();
 						if (window.innerWidth < 770) {
@@ -206,6 +208,7 @@ $(document).ready(function() {
 					break
 				case "Recording:":
 					if ($("#recordingCard").hasClass("hidden")) {
+						$("#musicLogo").addClass("hidden");
 						$(".accordionCards").hide();
 						$("#recordingCard").show();
 						if (window.innerWidth < 770) {
@@ -217,6 +220,7 @@ $(document).ready(function() {
 					break
 				case "Writing:":
 					if ($("#writingCard").hasClass("hidden")) {
+						$("#musicLogo").addClass("hidden");
 						$(".accordionCards").hide();
 						$("#writingCard").show();
 						if (window.innerWidth < 770) {
